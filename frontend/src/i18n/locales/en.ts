@@ -1,0 +1,46 @@
+export const en = {
+  siteName: 'adulthoods.cc',
+  nav: { home: 'Home', admin: 'Admin' },
+  footer: { tagline: 'Payment verification & tracking' },
+  public: {
+    title: 'Products',
+    hashQueryTitle: 'Order / Shipping Query',
+    hashQueryDesc: 'Enter your BNB chain transaction hash to check shipping status (anonymous).',
+    hashQueryPlaceholder: 'Transaction Hash (0x...)',
+    query: 'Query',
+    querying: 'Querying…',
+    result: {
+      courier: 'Courier',
+      trackingNo: 'Tracking No.',
+      status: 'Status',
+      noData: 'No shipping info for this hash yet. Check back later or contact support.',
+    },
+  },
+  product: {
+    style: 'Style',
+    verifyTitle: 'Payment verification (BNB chain hash)',
+    verifyPlaceholder: 'Paste hash after payment to verify',
+    verify: 'Verify',
+    imagePlaceholder: '[Image / Video]',
+    videoPlaceholder: '[Video]',
+  },
+  admin: {
+    title: 'Admin',
+    desc: 'Fill in courier and tracking number for each payment hash. Users can query by hash on the home page.',
+    tableHash: 'Payment Hash',
+    tableCourier: 'Courier',
+    tableTracking: 'Tracking No.',
+    actions: 'Actions',
+    addRow: 'Add row',
+    save: 'Save',
+    saved: 'Saved',
+    delete: 'Delete',
+    hashPlaceholder: '0x...',
+    courierPlaceholder: 'e.g. SF Express, ZTO',
+    trackingPlaceholder: 'Tracking number',
+    note: 'Backend needs: API to query shipping by hash; API to save hash + courier + tracking.',
+  },
+  lang: { en: 'English', zh: '中文' },
+} as const
+
+export type EnKeys = typeof en
