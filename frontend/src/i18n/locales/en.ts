@@ -44,4 +44,6 @@ export const en = {
   lang: { en: 'English', zh: '中文' },
 }
 
-export type EnKeys = typeof en
+// Use StringValues so EnKeys has string at every leaf (not literals), allowing zh to use Chinese strings
+type StringValues<T> = { [K in keyof T]: T[K] extends object ? StringValues<T[K]> : string }
+export type EnKeys = StringValues<typeof en>
