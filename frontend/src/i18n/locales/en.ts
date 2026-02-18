@@ -1,5 +1,6 @@
-// English locale. Do NOT use "as const" so that EnKeys has string types and zh can use Chinese strings.
-export const en = {
+import type { LocaleStrings } from './types'
+
+export const en: LocaleStrings = {
   siteName: 'adulthoods.cc',
   nav: { home: 'Home', admin: 'Admin' },
   footer: { tagline: 'Payment verification & tracking' },
@@ -44,6 +45,4 @@ export const en = {
   lang: { en: 'English', zh: '中文' },
 }
 
-// Use StringValues so EnKeys has string at every leaf (not literals), allowing zh to use Chinese strings
-type StringValues<T> = { [K in keyof T]: T[K] extends object ? StringValues<T[K]> : string }
-export type EnKeys = StringValues<typeof en>
+export type EnKeys = LocaleStrings

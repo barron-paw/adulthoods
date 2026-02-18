@@ -1,6 +1,6 @@
-import type { EnKeys } from './en'
+import type { LocaleStrings } from './types'
 
-export const zh: EnKeys = {
+export const zh: LocaleStrings = {
   siteName: 'adulthoods.cc',
   nav: { home: '首页', admin: '管理后台' },
   footer: { tagline: '支付验证与查询' },
