@@ -1,6 +1,7 @@
-import type { LocaleStrings } from './types'
+import type { EnKeys } from './en'
 
-export const zh: LocaleStrings = {
+// Use type assertion so Chinese strings are accepted (avoids literal type mismatch with en)
+export const zh = {
   siteName: 'adulthoods.cc',
   nav: { home: '首页', admin: '管理后台' },
   footer: { tagline: '支付验证与查询' },
@@ -43,4 +44,4 @@ export const zh: LocaleStrings = {
     note: '后端需提供：根据 hash 查询快递信息的接口；接受本页提交的 hash + 快递公司 + 单号的保存接口。',
   },
   lang: { en: 'English', zh: '中文' },
-}
+} as EnKeys
