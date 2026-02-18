@@ -1,6 +1,4 @@
-import type { LocaleStrings } from './types'
-
-export const en: LocaleStrings = {
+export const en = {
   siteName: 'adulthoods.cc',
   nav: { home: 'Home', admin: 'Admin' },
   footer: { tagline: 'Payment verification & tracking' },
@@ -45,4 +43,4 @@ export const en: LocaleStrings = {
   lang: { en: 'English', zh: '中文' },
 }
 
-export type EnKeys = LocaleStrings
+export type EnKeys = typeof en
