@@ -1,3 +1,4 @@
+// English locale. Do NOT use "as const" so that EnKeys has string types and zh can use Chinese strings.
 export const en = {
   siteName: 'adulthoods.cc',
   nav: { home: 'Home', admin: 'Admin' },
@@ -41,6 +42,6 @@ export const en = {
     note: 'Backend needs: API to query shipping by hash; API to save hash + courier + tracking.',
   },
   lang: { en: 'English', zh: '中文' },
-} as const
+}
 
 export type EnKeys = typeof en
