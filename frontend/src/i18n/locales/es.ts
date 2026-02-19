@@ -37,6 +37,11 @@ export const es = {
   admin: {
     title: 'Admin',
     desc: 'Rellena transportista y número de seguimiento para cada hash de pago. Los usuarios pueden consultar por hash en la página principal.',
+    loginTitle: 'Acceso admin',
+    passwordPlaceholder: 'Contraseña',
+    loginButton: 'Entrar',
+    loginError: 'Contraseña incorrecta.',
+    logout: 'Salir',
     tableHash: 'Hash de pago',
     tableCourier: 'Transportista',
     tableTracking: 'Nº de seguimiento',

@@ -35,6 +35,11 @@ export const en = {
   admin: {
     title: 'Admin',
     desc: 'Fill in courier and tracking number for each payment hash. Users can query by hash on the home page.',
+    loginTitle: 'Admin login',
+    passwordPlaceholder: 'Password',
+    loginButton: 'Log in',
+    loginError: 'Wrong password.',
+    logout: 'Log out',
     tableHash: 'Payment Hash',
     tableCourier: 'Courier',
     tableTracking: 'Tracking No.',

@@ -37,6 +37,11 @@ export const zh = {
   admin: {
     title: '管理后台',
     desc: '为每个支付 Hash 填写快递公司与单号，匿名用户可在首页通过 Hash 查询物流状态。',
+    loginTitle: '管理后台登录',
+    passwordPlaceholder: '密码',
+    loginButton: '登录',
+    loginError: '密码错误。',
+    logout: '退出',
     tableHash: '支付 Hash',
     tableCourier: '快递公司',
     tableTracking: '快递单号',

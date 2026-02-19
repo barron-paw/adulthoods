@@ -37,6 +37,11 @@ export const ja = {
   admin: {
     title: '管理',
     desc: '各支払いハッシュに配送業者と追跡番号を入力。ユーザーはホームでハッシュで照会できます。',
+    loginTitle: '管理ログイン',
+    passwordPlaceholder: 'パスワード',
+    loginButton: 'ログイン',
+    loginError: 'パスワードが正しくありません。',
+    logout: 'ログアウト',
     tableHash: '支払いハッシュ',
     tableCourier: '配送業者',
     tableTracking: '追跡番号',

@@ -37,6 +37,11 @@ export const ko = {
   admin: {
     title: '관리',
     desc: '각 결제 해시에 택배사와 송장 번호를 입력하세요. 사용자는 홈에서 해시로 조회할 수 있습니다.',
+    loginTitle: '관리 로그인',
+    passwordPlaceholder: '비밀번호',
+    loginButton: '로그인',
+    loginError: '비밀번호가 올바르지 않습니다.',
+    logout: '로그아웃',
     tableHash: '결제 해시',
     tableCourier: '택배사',
     tableTracking: '송장 번호',

@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { useI18n } from '../i18n/context'
 
+const ADMIN_TOKEN_KEY = 'adulthoods-admin-token'
+
 interface OrderRow {
   hash: string
   courier: string
@@ -11,11 +13,51 @@ const API_BASE = import.meta.env.VITE_API_URL || ''
 
 export default function AdminPage() {
   const { t } = useI18n()
+  const [token, setToken] = useState<string | null>(() => typeof window !== 'undefined' ? localStorage.getItem(ADMIN_TOKEN_KEY) : null)
+  const [password, setPassword] = useState('')
+  const [loginError, setLoginError] = useState<string | null>(null)
+  const [loginLoading, setLoginLoading] = useState(false)
   const [orders, setOrders] = useState<OrderRow[]>([
     { hash: '', courier: '', trackingNo: '' },
   ])
   const [saved, setSaved] = useState(false)
   const [error, setError] = useState<string | null>(null)
+
+  const logout = () => {
+    localStorage.removeItem(ADMIN_TOKEN_KEY)
+    setToken(null)
+    setPassword('')
+    setLoginError(null)
+  }
+
+  const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setLoginError(null)
+    setLoginLoading(true)
+    try {
+      const res = await fetch(`${API_BASE}/api/admin/login`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password }),
+      })
+      const data = await res.json().catch(() => ({}))
+      if (!res.ok) {
+        setLoginError(data.error || t.admin.loginError)
+        return
+      }
+      if (data.token) {
+        localStorage.setItem(ADMIN_TOKEN_KEY, data.token)
+        setToken(data.token)
+        setPassword('')
+      } else {
+        setLoginError(t.admin.loginError)
+      }
+    } catch {
+      setLoginError(t.admin.loginError)
+    } finally {
+      setLoginLoading(false)
+    }
+  }
 
   const addRow = () => {
     setOrders((prev) => [...prev, { hash: '', courier: '', trackingNo: '' }])
@@ -41,12 +83,24 @@ export default function AdminPage() {
       setError('Please fill at least one hash.')
       return
     }
+    if (!token) {
+      setError('Not logged in.')
+      return
+    }
     try {
       const res = await fetch(`${API_BASE}/api/admin/shipping`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
         body: JSON.stringify({ orders: rows }),
       })
+      if (res.status === 401) {
+        logout()
+        setError('Session expired. Please log in again.')
+        return
+      }
       if (!res.ok) throw new Error(await res.text())
       setSaved(true)
       setTimeout(() => setSaved(false), 2000)
@@ -55,10 +109,49 @@ export default function AdminPage() {
     }
   }
 
+  if (token === null) {
+    return (
+      <div className="max-w-sm mx-auto px-4 py-16">
+        <h1 className="text-xl font-semibold text-amber-400 mb-4">{t.admin.loginTitle}</h1>
+        <form onSubmit={handleLogin} className="space-y-4">
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder={t.admin.passwordPlaceholder}
+            autoComplete="current-password"
+            className="w-full px-4 py-3 rounded-lg bg-stone-800 border border-stone-600 text-stone-100 placeholder-stone-500 focus:outline-none focus:ring-1 focus:ring-amber-500/50"
+          />
+          {loginError && (
+            <p className="text-rose-400 text-sm">{loginError}</p>
+          )}
+          <button
+            type="submit"
+            disabled={loginLoading}
+            className="w-full px-4 py-3 rounded-lg bg-amber-600 text-white font-medium hover:bg-amber-500 disabled:opacity-50"
+          >
+            {loginLoading ? '…' : t.admin.loginButton}
+          </button>
+        </form>
+      </div>
+    )
+  }
+
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
-      <h1 className="text-2xl font-semibold text-amber-400 mb-2">{t.admin.title}</h1>
-      <p className="text-stone-500 text-sm mb-6">{t.admin.desc}</p>
+      <div className="flex items-center justify-between mb-4">
+        <div>
+          <h1 className="text-2xl font-semibold text-amber-400 mb-2">{t.admin.title}</h1>
+          <p className="text-stone-500 text-sm">{t.admin.desc}</p>
+        </div>
+        <button
+          type="button"
+          onClick={logout}
+          className="px-3 py-1.5 rounded-lg border border-stone-600 text-stone-400 text-sm hover:bg-stone-800"
+        >
+          {t.admin.logout}
+        </button>
+      </div>
 
       {error && (
         <p className="mb-4 p-3 rounded bg-rose-900/30 border border-rose-700 text-rose-300 text-sm">
