@@ -20,6 +20,9 @@ export const ko = {
   },
   product: {
     style: '스타일',
+    paymentAddressLabel: 'BNB 체인 결제 주소',
+    paymentAddressCopy: '복사',
+    paymentAddressCopied: '복사됨',
     verifyTitle: '결제 확인 (USDT 거래 해시)',
     verifyPlaceholder: '결제 후 해시를 붙여넣어 확인',
     verify: '확인',

@@ -20,6 +20,9 @@ export const ja = {
   },
   product: {
     style: 'スタイル',
+    paymentAddressLabel: 'BNBチェーン入金アドレス',
+    paymentAddressCopy: 'コピー',
+    paymentAddressCopied: 'コピーしました',
     verifyTitle: '支払い確認（USDT取引ハッシュ）',
     verifyPlaceholder: '支払い後にハッシュを貼り付けて確認',
     verify: '確認',

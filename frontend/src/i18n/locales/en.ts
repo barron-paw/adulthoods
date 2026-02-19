@@ -18,6 +18,9 @@ export const en = {
   },
   product: {
     style: 'Style',
+    paymentAddressLabel: 'BNB chain payment address',
+    paymentAddressCopy: 'Copy',
+    paymentAddressCopied: 'Copied',
     verifyTitle: 'Payment verification (USDT tx hash)',
     verifyPlaceholder: 'Paste hash after payment to verify',
     verify: 'Verify',

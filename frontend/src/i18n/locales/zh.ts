@@ -20,6 +20,9 @@ export const zh = {
   },
   product: {
     style: '款式',
+    paymentAddressLabel: 'BNB 链收款地址',
+    paymentAddressCopy: '复制',
+    paymentAddressCopied: '已复制',
     verifyTitle: '支付验证（USDT 交易 Hash）',
     verifyPlaceholder: '支付后填入 Hash 验证',
     verify: '验证',

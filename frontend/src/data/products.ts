@@ -1,7 +1,6 @@
 import type { Product } from '../types'
 
 const API_BASE = (import.meta.env.VITE_API_URL || 'https://api.adulthood.me').replace(/\/$/, '')
-// 文件在服务器 backend/adultho/ 下时用 /adulthoodgoods/；若在 adultho/123456/ 下则改为 /adulthoodgoods/123456/
 const GOODS_BASE = `${API_BASE}/adulthoodgoods`
 
 export const placeholderProducts: Product[] = [
@@ -13,8 +12,8 @@ export const placeholderProducts: Product[] = [
     videoUrl: `${GOODS_BASE}/2.MP4`,
     defaultVariantId: 'v1',
     variants: [
-      { id: 'v1', name: 'Standard', price: '0.00 USDT' },
-      { id: 'v2', name: 'Large', price: '0.00 USDT' },
+      { id: 'v1', name: 'Standard', price: '0.01 BNB' },
+      { id: 'v2', name: 'Large', price: '0.01 BNB' },
     ],
   },
   {
@@ -25,8 +24,8 @@ export const placeholderProducts: Product[] = [
     videoUrl: `${GOODS_BASE}/4.MP4`,
     defaultVariantId: 'v1',
     variants: [
-      { id: 'v1', name: 'Single', price: '0.00 USDT' },
-      { id: 'v2', name: 'Set', price: '0.00 USDT' },
+      { id: 'v1', name: 'Single', price: '0.01 BNB' },
+      { id: 'v2', name: 'Set', price: '0.01 BNB' },
     ],
   },
   {
@@ -37,8 +36,8 @@ export const placeholderProducts: Product[] = [
     videoUrl: `${GOODS_BASE}/6.MP4`,
     defaultVariantId: 'v1',
     variants: [
-      { id: 'v1', name: 'Style 1', price: '0.00 USDT' },
-      { id: 'v2', name: 'Style 2', price: '0.00 USDT' },
+      { id: 'v1', name: 'Style 1', price: '0.01 BNB' },
+      { id: 'v2', name: 'Style 2', price: '0.01 BNB' },
     ],
   },
 ]

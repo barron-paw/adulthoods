@@ -19,6 +19,9 @@ export interface LocaleStrings {
   }
   product: {
     style: string
+    paymentAddressLabel: string
+    paymentAddressCopy: string
+    paymentAddressCopied: string
     verifyTitle: string
     verifyPlaceholder: string
     verify: string

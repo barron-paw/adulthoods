@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useI18n } from '../i18n/context'
+import { BNB_PAYMENT_ADDRESS } from '../config/payment'
 import type { Product } from '../types'
 
 const API_BASE = import.meta.env.VITE_API_URL || ''
@@ -19,6 +20,14 @@ export default function ProductCard({ product }: ProductCardProps) {
   const [phone, setPhone] = useState('')
   const [remarks, setRemarks] = useState('')
   const [verifyStatus, setVerifyStatus] = useState<'idle' | 'loading' | 'ok' | 'error'>('idle')
+  const [verifyError, setVerifyError] = useState('')
+  const [copyFeedback, setCopyFeedback] = useState(false)
+  const copyAddress = () => {
+    navigator.clipboard.writeText(BNB_PAYMENT_ADDRESS).then(() => {
+      setCopyFeedback(true)
+      setTimeout(() => setCopyFeedback(false), 2000)
+    })
+  }
 
   const selectedVariant = product.variants.find((v) => v.id === selectedVariantId) ?? product.variants[0]
   const hasImages = product.images.length > 0
@@ -30,6 +39,7 @@ export default function ProductCard({ product }: ProductCardProps) {
     const trimmedHash = hash.trim()
     if (!trimmedHash) return
     setVerifyStatus('loading')
+    setVerifyError('')
     try {
       const res = await fetch(`${API_BASE}/api/order`, {
         method: 'POST',
@@ -46,6 +56,8 @@ export default function ProductCard({ product }: ProductCardProps) {
       if (res.ok) {
         setVerifyStatus('ok')
       } else {
+        const data = await res.json().catch(() => ({}))
+        setVerifyError((data.error || res.statusText) as string)
         setVerifyStatus('error')
       }
     } catch {
@@ -134,6 +146,19 @@ export default function ProductCard({ product }: ProductCardProps) {
         <p className="text-rose-400 font-medium mt-auto">{selectedVariant.price}</p>
 
         <div className="mt-4 pt-4 border-t border-stone-700 space-y-3">
+          <p className="text-stone-500 text-xs mb-1">{t.product.paymentAddressLabel}</p>
+          <div className="flex items-center gap-2 mb-2">
+            <code className="flex-1 min-w-0 px-2 py-1.5 rounded bg-stone-800 border border-stone-600 text-stone-400 text-xs truncate">
+              {BNB_PAYMENT_ADDRESS}
+            </code>
+            <button
+              type="button"
+              onClick={copyAddress}
+              className="shrink-0 px-2 py-1.5 rounded bg-stone-700 text-stone-300 text-xs hover:bg-stone-600"
+            >
+              {copyFeedback ? t.product.paymentAddressCopied : t.product.paymentAddressCopy}
+            </button>
+          </div>
           <p className="text-stone-500 text-xs mb-2">{t.product.verifyTitle}</p>
           <input
             type="text"
@@ -163,6 +188,9 @@ export default function ProductCard({ product }: ProductCardProps) {
             rows={2}
             className="w-full px-3 py-2 rounded bg-stone-800 border border-stone-600 text-stone-400 text-xs placeholder-stone-600 resize-none"
           />
+          {verifyStatus === 'error' && verifyError && (
+            <p className="text-rose-400 text-xs">{verifyError}</p>
+          )}
           <button
             type="button"
             onClick={handleVerify}

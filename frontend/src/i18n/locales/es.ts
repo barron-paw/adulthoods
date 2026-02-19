@@ -20,6 +20,9 @@ export const es = {
   },
   product: {
     style: 'Estilo',
+    paymentAddressLabel: 'Dirección de pago BNB chain',
+    paymentAddressCopy: 'Copiar',
+    paymentAddressCopied: 'Copiado',
     verifyTitle: 'Verificación de pago (hash transacción USDT)',
     verifyPlaceholder: 'Pega el hash después del pago para verificar',
     verify: 'Verificar',
