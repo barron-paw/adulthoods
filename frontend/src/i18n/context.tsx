@@ -1,10 +1,14 @@
 import { createContext, useContext, useMemo, useState, useCallback, useEffect } from 'react'
 import { en, type EnKeys } from './locales/en'
 import { zh } from './locales/zh'
+import { ja } from './locales/ja'
+import { ko } from './locales/ko'
+import { es } from './locales/es'
 
-export type Locale = 'en' | 'zh'
-const locales: Record<Locale, EnKeys> = { en, zh }
+export type Locale = 'en' | 'zh' | 'ja' | 'ko' | 'es'
+const locales: Record<Locale, EnKeys> = { en, zh, ja, ko, es }
 const STORAGE_KEY = 'adulthoods-locale'
+const VALID_LOCALES: Locale[] = ['en', 'zh', 'ja', 'ko', 'es']
 
 interface I18nContextValue {
   t: EnKeys
@@ -18,7 +22,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>(() => {
     if (typeof window === 'undefined') return 'en'
     const stored = localStorage.getItem(STORAGE_KEY) as Locale | null
-    return stored && (stored === 'en' || stored === 'zh') ? stored : 'en'
+    return stored && VALID_LOCALES.includes(stored) ? stored : 'en'
   })
 
   const setLocale = useCallback((next: Locale) => {
@@ -32,8 +36,16 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
   )
 
   useEffect(() => {
-    document.documentElement.lang = locale === 'zh' ? 'zh-CN' : 'en'
-    document.title = `adulthoods.cc${locale === 'zh' ? ' · 成人用品' : ' · Adult Products'}`
+    const langMap: Record<Locale, string> = { en: 'en', zh: 'zh-CN', ja: 'ja', ko: 'ko', es: 'es' }
+    const titleSuffix: Record<Locale, string> = {
+      en: ' · Adult Products',
+      zh: ' · 成人用品',
+      ja: ' · アダルト',
+      ko: ' · 성인용품',
+      es: ' · Productos',
+    }
+    document.documentElement.lang = langMap[locale]
+    document.title = `adulthoods.cc${titleSuffix[locale]}`
   }, [locale])
 
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>

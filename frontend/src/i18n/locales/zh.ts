@@ -23,8 +23,16 @@ export const zh = {
     verifyTitle: '支付验证（BNB 链 Hash）',
     verifyPlaceholder: '支付后填入 Hash 验证',
     verify: '验证',
+    images: '图片',
+    video: '视频',
     imagePlaceholder: '[图片/视频占位]',
     videoPlaceholder: '[视频占位]',
+    address: '地址',
+    addressPlaceholder: '收货地址',
+    phone: '电话',
+    phonePlaceholder: '手机/电话',
+    remarks: '备注',
+    remarksPlaceholder: '配送备注（选填）',
   },
   admin: {
     title: '管理后台',
@@ -42,5 +50,5 @@ export const zh = {
     trackingPlaceholder: '快递单号',
     note: '后端需提供：根据 hash 查询快递信息的接口；接受本页提交的 hash + 快递公司 + 单号的保存接口。',
   },
-  lang: { en: 'English', zh: '中文' },
+  lang: { en: 'English', zh: '中文', ja: '日本語', ko: '한국어', es: 'Español' },
 } as unknown as EnKeys

@@ -21,8 +21,16 @@ export const en = {
     verifyTitle: 'Payment verification (BNB chain hash)',
     verifyPlaceholder: 'Paste hash after payment to verify',
     verify: 'Verify',
+    images: 'Images',
+    video: 'Video',
     imagePlaceholder: '[Image / Video]',
     videoPlaceholder: '[Video]',
+    address: 'Address',
+    addressPlaceholder: 'Shipping address',
+    phone: 'Phone',
+    phonePlaceholder: 'Phone number',
+    remarks: 'Remarks',
+    remarksPlaceholder: 'Delivery notes (optional)',
   },
   admin: {
     title: 'Admin',
@@ -40,7 +48,7 @@ export const en = {
     trackingPlaceholder: 'Tracking number',
     note: 'Backend needs: API to query shipping by hash; API to save hash + courier + tracking.',
   },
-  lang: { en: 'English', zh: '中文' },
+  lang: { en: 'English', zh: '中文', ja: '日本語', ko: '한국어', es: 'Español' },
 }
 
 export type EnKeys = typeof en

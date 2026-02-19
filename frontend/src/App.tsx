@@ -16,7 +16,7 @@ function App() {
             <Link to="/" className="text-stone-400 hover:text-stone-200">{t.nav.home}</Link>
             <Link to="/admin" className="text-stone-500 hover:text-amber-400">{t.nav.admin}</Link>
             <div className="flex gap-1 border-l border-stone-700 pl-4">
-              {(['en', 'zh'] as Locale[]).map((l) => (
+              {(['en', 'zh', 'ja', 'ko', 'es'] as Locale[]).map((l) => (
                 <button
                   key={l}
                   type="button"
