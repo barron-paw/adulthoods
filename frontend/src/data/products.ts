@@ -1,6 +1,7 @@
 import type { Product } from '../types'
 
-const GOODS_BASE = 'https://api.adulthood.me/adulthoodgoods/123456'
+const API_BASE = (import.meta.env.VITE_API_URL || 'https://api.adulthood.me').replace(/\/$/, '')
+const GOODS_BASE = `${API_BASE}/adulthoodgoods/123456`
 
 export const placeholderProducts: Product[] = [
   {

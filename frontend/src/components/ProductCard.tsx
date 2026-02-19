@@ -23,6 +23,8 @@ export default function ProductCard({ product }: ProductCardProps) {
   const selectedVariant = product.variants.find((v) => v.id === selectedVariantId) ?? product.variants[0]
   const hasImages = product.images.length > 0
   const hasVideo = !!product.videoUrl
+  const [imgError, setImgError] = useState(false)
+  const [videoError, setVideoError] = useState(false)
 
   const handleVerify = async () => {
     const trimmedHash = hash.trim()
@@ -73,12 +75,30 @@ export default function ProductCard({ product }: ProductCardProps) {
         <div className="flex-1 flex items-center justify-center text-stone-500 text-sm min-h-0">
           {mediaTab === 'video' ? (
             hasVideo ? (
-              <video src={product.videoUrl} controls className="max-w-full max-h-full object-contain" />
+              videoError ? (
+                <span className="text-xs px-2 text-center">{t.product.videoPlaceholder}</span>
+              ) : (
+                <video
+                  src={product.videoUrl}
+                  controls
+                  className="max-w-full max-h-full object-contain"
+                  onError={() => setVideoError(true)}
+                />
+              )
             ) : (
               <span className="text-xs">{t.product.videoPlaceholder}</span>
             )
           ) : hasImages ? (
-            <img src={product.images[0]} alt={product.name} className="w-full h-full object-cover" />
+            imgError ? (
+              <span className="text-xs px-2 text-center">{t.product.imagePlaceholder}</span>
+            ) : (
+              <img
+                src={product.images[0]}
+                alt={product.name}
+                className="w-full h-full object-cover"
+                onError={() => setImgError(true)}
+              />
+            )
           ) : (
             <span className="text-xs">{t.product.imagePlaceholder}</span>
           )}
