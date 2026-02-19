@@ -8,8 +8,8 @@ export const placeholderProducts: Product[] = [
     id: 'p1',
     name: 'Product A',
     description: 'Product description placeholder.',
-    images: [`${GOODS_BASE}/1.jpg`],
-    videoUrl: `${GOODS_BASE}/2.mp4`,
+    images: [`${GOODS_BASE}/1.png`],
+    videoUrl: `${GOODS_BASE}/2.MP4`,
     defaultVariantId: 'v1',
     variants: [
       { id: 'v1', name: 'Standard', price: '0.00 USDT' },
@@ -20,8 +20,8 @@ export const placeholderProducts: Product[] = [
     id: 'p2',
     name: 'Product B',
     description: 'Product description placeholder.',
-    images: [`${GOODS_BASE}/3.jpg`],
-    videoUrl: `${GOODS_BASE}/4.mp4`,
+    images: [`${GOODS_BASE}/3.jpeg`],
+    videoUrl: `${GOODS_BASE}/4.MP4`,
     defaultVariantId: 'v1',
     variants: [
       { id: 'v1', name: 'Single', price: '0.00 USDT' },
@@ -32,8 +32,8 @@ export const placeholderProducts: Product[] = [
     id: 'p3',
     name: 'Product C',
     description: 'Product description placeholder.',
-    images: [`${GOODS_BASE}/5.jpg`],
-    videoUrl: `${GOODS_BASE}/6.mp4`,
+    images: [`${GOODS_BASE}/5.JPG`],
+    videoUrl: `${GOODS_BASE}/6.MP4`,
     defaultVariantId: 'v1',
     variants: [
       { id: 'v1', name: 'Style 1', price: '0.00 USDT' },
