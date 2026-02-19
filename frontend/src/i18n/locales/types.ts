@@ -24,6 +24,8 @@ export interface LocaleStrings {
     verify: string
     imagePlaceholder: string
     videoPlaceholder: string
+    imageLoadFailed: string
+    videoLoadFailed: string
   }
   admin: {
     title: string

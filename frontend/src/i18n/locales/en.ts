@@ -25,6 +25,8 @@ export const en = {
     video: 'Video',
     imagePlaceholder: '[Image / Video]',
     videoPlaceholder: '[Video]',
+    imageLoadFailed: 'Image failed to load',
+    videoLoadFailed: 'Video failed to load',
     address: 'Address',
     addressPlaceholder: 'Shipping address',
     phone: 'Phone',

@@ -27,6 +27,8 @@ export const es = {
     video: 'Vídeo',
     imagePlaceholder: '[Imagen / Vídeo]',
     videoPlaceholder: '[Vídeo]',
+    imageLoadFailed: 'Error al cargar la imagen',
+    videoLoadFailed: 'Error al cargar el vídeo',
     address: 'Dirección',
     addressPlaceholder: 'Dirección de envío',
     phone: 'Teléfono',

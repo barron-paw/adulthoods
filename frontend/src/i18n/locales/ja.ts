@@ -27,6 +27,8 @@ export const ja = {
     video: '動画',
     imagePlaceholder: '[画像・動画]',
     videoPlaceholder: '[動画]',
+    imageLoadFailed: '画像の読み込みに失敗しました',
+    videoLoadFailed: '動画の読み込みに失敗しました',
     address: '住所',
     addressPlaceholder: '配送先住所',
     phone: '電話',

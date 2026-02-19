@@ -76,7 +76,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           {mediaTab === 'video' ? (
             hasVideo ? (
               videoError ? (
-                <span className="text-xs px-2 text-center">{t.product.videoPlaceholder}</span>
+                <span className="text-xs px-2 text-center">{t.product.videoLoadFailed}</span>
               ) : (
                 <video
                   src={product.videoUrl}
@@ -90,7 +90,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             )
           ) : hasImages ? (
             imgError ? (
-              <span className="text-xs px-2 text-center">{t.product.imagePlaceholder}</span>
+              <span className="text-xs px-2 text-center">{t.product.imageLoadFailed}</span>
             ) : (
               <img
                 src={product.images[0]}

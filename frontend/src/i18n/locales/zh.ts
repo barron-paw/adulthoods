@@ -27,6 +27,8 @@ export const zh = {
     video: '视频',
     imagePlaceholder: '[图片/视频占位]',
     videoPlaceholder: '[视频占位]',
+    imageLoadFailed: '图片加载失败',
+    videoLoadFailed: '视频加载失败',
     address: '地址',
     addressPlaceholder: '收货地址',
     phone: '电话',

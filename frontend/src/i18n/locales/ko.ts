@@ -27,6 +27,8 @@ export const ko = {
     video: '동영상',
     imagePlaceholder: '[이미지/동영상]',
     videoPlaceholder: '[동영상]',
+    imageLoadFailed: '이미지를 불러올 수 없습니다',
+    videoLoadFailed: '동영상을 불러올 수 없습니다',
     address: '주소',
     addressPlaceholder: '배송 주소',
     phone: '전화',
