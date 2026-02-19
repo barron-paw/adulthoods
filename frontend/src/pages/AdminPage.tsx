@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useI18n } from '../i18n/context'
 
 const ADMIN_TOKEN_KEY = 'adulthoods-admin-token'
@@ -22,6 +22,9 @@ export default function AdminPage() {
   ])
   const [saved, setSaved] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [wecomWebhook, setWecomWebhook] = useState('')
+  const [wecomSaveLoading, setWecomSaveLoading] = useState(false)
+  const [wecomSaved, setWecomSaved] = useState(false)
 
   const logout = () => {
     localStorage.removeItem(ADMIN_TOKEN_KEY)
@@ -74,6 +77,43 @@ export default function AdminPage() {
   const removeRow = (index: number) => {
     if (orders.length <= 1) return
     setOrders((prev) => prev.filter((_, i) => i !== index))
+  }
+
+  useEffect(() => {
+    if (!token) return
+    let cancelled = false
+    fetch(`${API_BASE}/api/admin/settings`, {
+      headers: { Authorization: `Bearer ${token}` },
+    })
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (!cancelled && data?.wecomWebhook != null) setWecomWebhook(data.wecomWebhook || '')
+      })
+      .catch(() => {})
+    return () => { cancelled = true }
+  }, [token])
+
+  const handleWecomSave = async () => {
+    if (!token) return
+    setWecomSaveLoading(true)
+    setWecomSaved(false)
+    try {
+      const res = await fetch(`${API_BASE}/api/admin/settings`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ wecomWebhook: wecomWebhook.trim() }),
+      })
+      if (res.status === 401) logout()
+      if (res.ok) {
+        setWecomSaved(true)
+        setTimeout(() => setWecomSaved(false), 2000)
+      }
+    } finally {
+      setWecomSaveLoading(false)
+    }
   }
 
   const handleSave = async () => {
@@ -238,6 +278,29 @@ export default function AdminPage() {
       </div>
 
       <p className="mt-4 text-stone-500 text-xs">{t.admin.note}</p>
+
+      <div className="mt-8 rounded-xl border border-stone-700 bg-stone-900/60 overflow-hidden">
+        <div className="p-4 border-b border-stone-700">
+          <span className="text-stone-400 text-sm">{t.admin.wecomTitle}</span>
+        </div>
+        <div className="p-4 flex flex-col sm:flex-row gap-3">
+          <input
+            type="url"
+            value={wecomWebhook}
+            onChange={(e) => setWecomWebhook(e.target.value)}
+            placeholder={t.admin.wecomPlaceholder}
+            className="flex-1 min-w-0 px-3 py-2 rounded-lg bg-stone-800 border border-stone-600 text-stone-100 placeholder-stone-500 focus:outline-none focus:ring-1 focus:ring-amber-500/50"
+          />
+          <button
+            type="button"
+            onClick={handleWecomSave}
+            disabled={wecomSaveLoading}
+            className="px-4 py-2 rounded-lg bg-amber-600 text-white text-sm hover:bg-amber-500 disabled:opacity-50 whitespace-nowrap"
+          >
+            {wecomSaveLoading ? '…' : wecomSaved ? t.admin.wecomSaved : t.admin.wecomSave}
+          </button>
+        </div>
+      </div>
     </div>
   )
 }

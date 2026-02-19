@@ -7,7 +7,7 @@ export const es = {
   public: {
     title: 'Productos',
     hashQueryTitle: 'Pedido / Consulta de envío',
-    hashQueryDesc: 'Introduce el hash de la transacción en la cadena BNB para consultar el estado del envío (anónimo).',
+    hashQueryDesc: 'Introduce el hash de la transacción USDT para consultar el estado del envío (anónimo).',
     hashQueryPlaceholder: 'Hash de transacción (0x...)',
     query: 'Consultar',
     querying: 'Consultando…',
@@ -20,7 +20,7 @@ export const es = {
   },
   product: {
     style: 'Estilo',
-    verifyTitle: 'Verificación de pago (hash cadena BNB)',
+    verifyTitle: 'Verificación de pago (hash transacción USDT)',
     verifyPlaceholder: 'Pega el hash después del pago para verificar',
     verify: 'Verificar',
     images: 'Imágenes',
@@ -54,6 +54,10 @@ export const es = {
     courierPlaceholder: 'ej. SF Express, ZTO',
     trackingPlaceholder: 'Número de seguimiento',
     note: 'Backend: API para consultar envío por hash; API para guardar hash + transportista + seguimiento.',
+    wecomTitle: 'Robot WeCom (WeChat empresarial)',
+    wecomPlaceholder: 'URL del webhook (ej. https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=...)',
+    wecomSave: 'Guardar webhook',
+    wecomSaved: 'Guardado',
   },
   lang: { en: 'English', zh: '中文', ja: '日本語', ko: '한국어', es: 'Español' },
 } as unknown as EnKeys

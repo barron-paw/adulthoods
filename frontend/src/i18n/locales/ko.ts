@@ -7,7 +7,7 @@ export const ko = {
   public: {
     title: '상품',
     hashQueryTitle: '주문 / 배송 조회',
-    hashQueryDesc: 'BNB 체인 거래 해시를 입력하여 배송 상태를 확인하세요(익명 가능).',
+    hashQueryDesc: 'USDT 거래 해시를 입력하여 배송 상태를 확인하세요(익명 가능).',
     hashQueryPlaceholder: '거래 해시 (0x...)',
     query: '조회',
     querying: '조회 중…',
@@ -20,7 +20,7 @@ export const ko = {
   },
   product: {
     style: '스타일',
-    verifyTitle: '결제 확인 (BNB 체인 해시)',
+    verifyTitle: '결제 확인 (USDT 거래 해시)',
     verifyPlaceholder: '결제 후 해시를 붙여넣어 확인',
     verify: '확인',
     images: '이미지',
@@ -54,6 +54,10 @@ export const ko = {
     courierPlaceholder: '예: SF Express, ZTO',
     trackingPlaceholder: '송장 번호',
     note: '백엔드: 해시로 배송 조회 API, 해시+택배사+송장 저장 API 필요.',
+    wecomTitle: '기업위챗 로봇',
+    wecomPlaceholder: 'Webhook URL (예: https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=...)',
+    wecomSave: 'Webhook 저장',
+    wecomSaved: '저장됨',
   },
   lang: { en: 'English', zh: '中文', ja: '日本語', ko: '한국어', es: 'Español' },
 } as unknown as EnKeys

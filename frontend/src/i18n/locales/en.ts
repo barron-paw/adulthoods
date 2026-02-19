@@ -5,7 +5,7 @@ export const en = {
   public: {
     title: 'Products',
     hashQueryTitle: 'Order / Shipping Query',
-    hashQueryDesc: 'Enter your BNB chain transaction hash to check shipping status (anonymous).',
+    hashQueryDesc: 'Enter your USDT transaction hash to check shipping status (anonymous).',
     hashQueryPlaceholder: 'Transaction Hash (0x...)',
     query: 'Query',
     querying: 'Querying…',
@@ -18,7 +18,7 @@ export const en = {
   },
   product: {
     style: 'Style',
-    verifyTitle: 'Payment verification (BNB chain hash)',
+    verifyTitle: 'Payment verification (USDT tx hash)',
     verifyPlaceholder: 'Paste hash after payment to verify',
     verify: 'Verify',
     images: 'Images',
@@ -52,6 +52,10 @@ export const en = {
     courierPlaceholder: 'e.g. SF Express, ZTO',
     trackingPlaceholder: 'Tracking number',
     note: 'Backend needs: API to query shipping by hash; API to save hash + courier + tracking.',
+    wecomTitle: 'WeCom (Enterprise WeChat) Robot',
+    wecomPlaceholder: 'Webhook URL (e.g. https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=...)',
+    wecomSave: 'Save webhook',
+    wecomSaved: 'Saved',
   },
   lang: { en: 'English', zh: '中文', ja: '日本語', ko: '한국어', es: 'Español' },
 }

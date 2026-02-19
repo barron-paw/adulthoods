@@ -9,8 +9,8 @@ export const placeholderProducts: Product[] = [
     videoUrl: undefined,
     defaultVariantId: 'v1',
     variants: [
-      { id: 'v1', name: 'Standard', price: '0.00 BNB' },
-      { id: 'v2', name: 'Large', price: '0.00 BNB' },
+      { id: 'v1', name: 'Standard', price: '0.00 USDT' },
+      { id: 'v2', name: 'Large', price: '0.00 USDT' },
     ],
   },
   {
@@ -21,8 +21,8 @@ export const placeholderProducts: Product[] = [
     videoUrl: undefined,
     defaultVariantId: 'v1',
     variants: [
-      { id: 'v1', name: 'Single', price: '0.00 BNB' },
-      { id: 'v2', name: 'Set', price: '0.00 BNB' },
+      { id: 'v1', name: 'Single', price: '0.00 USDT' },
+      { id: 'v2', name: 'Set', price: '0.00 USDT' },
     ],
   },
   {
@@ -33,8 +33,8 @@ export const placeholderProducts: Product[] = [
     videoUrl: undefined,
     defaultVariantId: 'v1',
     variants: [
-      { id: 'v1', name: 'Style 1', price: '0.00 BNB' },
-      { id: 'v2', name: 'Style 2', price: '0.00 BNB' },
+      { id: 'v1', name: 'Style 1', price: '0.00 USDT' },
+      { id: 'v2', name: 'Style 2', price: '0.00 USDT' },
     ],
   },
 ]

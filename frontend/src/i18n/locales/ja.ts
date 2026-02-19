@@ -7,7 +7,7 @@ export const ja = {
   public: {
     title: '商品',
     hashQueryTitle: '注文・配送照会',
-    hashQueryDesc: 'BNBチェーンの取引ハッシュを入力して配送状況を確認（匿名可）。',
+    hashQueryDesc: 'USDT取引ハッシュを入力して配送状況を確認（匿名可）。',
     hashQueryPlaceholder: '取引ハッシュ (0x...)',
     query: '照会',
     querying: '照会中…',
@@ -20,7 +20,7 @@ export const ja = {
   },
   product: {
     style: 'スタイル',
-    verifyTitle: '支払い確認（BNBチェーンハッシュ）',
+    verifyTitle: '支払い確認（USDT取引ハッシュ）',
     verifyPlaceholder: '支払い後にハッシュを貼り付けて確認',
     verify: '確認',
     images: '画像',
@@ -54,6 +54,10 @@ export const ja = {
     courierPlaceholder: '例：SF Express, ZTO',
     trackingPlaceholder: '追跡番号',
     note: 'バックエンド：ハッシュで配送照会API、ハッシュ+配送業者+追跡の保存APIが必要。',
+    wecomTitle: '企業微信ロボット',
+    wecomPlaceholder: 'Webhook URL（例: https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=...）',
+    wecomSave: 'Webhookを保存',
+    wecomSaved: '保存済み',
   },
   lang: { en: 'English', zh: '中文', ja: '日本語', ko: '한국어', es: 'Español' },
 } as unknown as EnKeys

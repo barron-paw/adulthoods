@@ -7,7 +7,7 @@ export const zh = {
   public: {
     title: '商品',
     hashQueryTitle: '订单 / 物流查询',
-    hashQueryDesc: '匿名用户请输入支付时的 BNB 链交易 Hash 查询快递状态。',
+    hashQueryDesc: '匿名用户请输入支付时的 USDT 交易 Hash 查询快递状态。',
     hashQueryPlaceholder: '请输入交易 Hash (0x...)',
     query: '查询',
     querying: '查询中…',
@@ -20,7 +20,7 @@ export const zh = {
   },
   product: {
     style: '款式',
-    verifyTitle: '支付验证（BNB 链 Hash）',
+    verifyTitle: '支付验证（USDT 交易 Hash）',
     verifyPlaceholder: '支付后填入 Hash 验证',
     verify: '验证',
     images: '图片',
@@ -54,6 +54,10 @@ export const zh = {
     courierPlaceholder: '如：顺丰、中通',
     trackingPlaceholder: '快递单号',
     note: '后端需提供：根据 hash 查询快递信息的接口；接受本页提交的 hash + 快递公司 + 单号的保存接口。',
+    wecomTitle: '企业微信机器人',
+    wecomPlaceholder: 'Webhook 地址（如 https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=...）',
+    wecomSave: '保存',
+    wecomSaved: '已保存',
   },
   lang: { en: 'English', zh: '中文', ja: '日本語', ko: '한국어', es: 'Español' },
 } as unknown as EnKeys
