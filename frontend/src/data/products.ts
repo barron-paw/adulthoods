@@ -1,7 +1,8 @@
 import type { Product } from '../types'
 
 const API_BASE = (import.meta.env.VITE_API_URL || 'https://api.adulthood.me').replace(/\/$/, '')
-const GOODS_BASE = `${API_BASE}/adulthoodgoods/123456`
+// 文件在服务器 backend/adultho/ 下时用 /adulthoodgoods/；若在 adultho/123456/ 下则改为 /adulthoodgoods/123456/
+const GOODS_BASE = `${API_BASE}/adulthoodgoods`
 
 export const placeholderProducts: Product[] = [
   {
