@@ -1,7 +1,7 @@
 import type { EnKeys } from './en'
 
 export const ja = {
-  siteName: 'adulthoods.cc',
+  siteName: 'adulthood.me',
   nav: { home: 'ホーム', admin: '管理' },
   footer: { tagline: '支払い確認・追跡' },
   public: {

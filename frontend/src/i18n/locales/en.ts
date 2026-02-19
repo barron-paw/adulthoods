@@ -1,5 +1,5 @@
 export const en = {
-  siteName: 'adulthoods.cc',
+  siteName: 'adulthood.me',
   nav: { home: 'Home', admin: 'Admin' },
   footer: { tagline: 'Payment verification & tracking' },
   public: {

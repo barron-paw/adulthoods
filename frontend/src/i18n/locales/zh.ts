@@ -1,7 +1,7 @@
 import type { EnKeys } from './en'
 
 export const zh = {
-  siteName: 'adulthoods.cc',
+  siteName: 'adulthood.me',
   nav: { home: '首页', admin: '管理后台' },
   footer: { tagline: '支付验证与查询' },
   public: {

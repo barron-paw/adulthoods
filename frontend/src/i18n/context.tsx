@@ -45,7 +45,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
       es: ' · Productos',
     }
     document.documentElement.lang = langMap[locale]
-    document.title = `adulthoods.cc${titleSuffix[locale]}`
+    document.title = `adulthood.me${titleSuffix[locale]}`
   }, [locale])
 
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>

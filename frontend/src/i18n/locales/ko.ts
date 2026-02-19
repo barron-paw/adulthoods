@@ -1,7 +1,7 @@
 import type { EnKeys } from './en'
 
 export const ko = {
-  siteName: 'adulthoods.cc',
+  siteName: 'adulthood.me',
   nav: { home: '홈', admin: '관리' },
   footer: { tagline: '결제 확인 및 조회' },
   public: {

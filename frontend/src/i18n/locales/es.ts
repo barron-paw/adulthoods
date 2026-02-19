@@ -1,7 +1,7 @@
 import type { EnKeys } from './en'
 
 export const es = {
-  siteName: 'adulthoods.cc',
+  siteName: 'adulthood.me',
   nav: { home: 'Inicio', admin: 'Admin' },
   footer: { tagline: 'Verificación de pago y seguimiento' },
   public: {
