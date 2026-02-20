@@ -84,19 +84,19 @@ export const es = {
   },
   productDescriptions: {
     p1: {
-      v1: 'Oral sex function with smart dialogue. Supports vaginal, anal, breast, hand, foot and oral + hand-made hair implant + integrated vaginal design + 28MM skin thickness + smart vaginal vibration & moaning + 88 kinds of realistic voice dialogue + medical-grade fine nano soft silicone + virgin design (no bleeding) + 1:1 real-life 165CM height, approx. 6kg weight + realistic silicone chest + 3hr charge for 7–8hr dialogue + 3-year warranty + leg fold storage 30–50cm.',
-      v2: 'Portable detachable head + oral sex function with voice/sound + supports vaginal, anal, breast, foot and oral + realistic wig + integrated vaginal design + built-in metal skeleton + custom smart voice & pubic hair implant + channel constant 37.5°C + medical-grade fine nano soft silicone + 1:1 real-life wax S makeup + realistic jelly chest + adjustable limbs + lifetime warranty + case storage 1m.',
+      v1: 'Función oral con diálogo inteligente. Vaginal, anal, pecho, mano, pie y oral + implante de pelo artesanal + diseño vaginal integrado + piel 28MM + vibración y gemidos + 88 voces realistas + silicona nano médica + diseño virgen (sin sangrado) + 165cm 1:1, ~6kg + pecho silicona + carga 3h para 7–8h diálogo + 3 años garantía + plegado 30–50cm.',
+      v2: 'Cabeza desmontable portátil + oral con voz/sonido. Vaginal, anal, pecho, pie y oral + peluca realista + diseño vaginal integrado + esqueleto metálico + voz inteligente e implante vello púbico + canal 37.5°C + silicona nano + maquillaje cera S 1:1 + pecho gelatina + extremidades ajustables + garantía vitalicia + estuche 1m.',
     },
     p2: {
-      v1: 'Approx. 30kg, 153cm height, full-body solid, no inflation. Supports vaginal, anal, breast, hand, foot and oral + realistic hair + real-life cast integrated vaginal design + 1:1 jelly chest + 1:1 permanent fine makeup (no deformation) + channel heating 37.5°C + standing + built-in metal skeleton 48 joints (any pose) + 1:1 jelly butt + real-life cast dual uterine channels + custom smart vaginal vibration clamp & pubic hair implant.',
-      v2: 'Approx. 34kg, 163cm height, full-body solid, no inflation. Supports vaginal, anal, breast, hand, foot and oral + realistic hair + real-life cast integrated vaginal design + 1:1 jelly chest + standing + 1:1 permanent fine makeup (no deformation) + channel heating 37.5°C + built-in metal skeleton 56 joints (2026 new frame, any position) + 1:1 jelly butt + self-lubricating (no lube needed, smoother with use, sustained pleasure) + real-life cast dual uterine channels.',
+      v1: 'Aprox. 30kg, 153cm, cuerpo sólido, sin inflar. Vaginal, anal, pecho, mano, pie y oral + pelo realista + diseño vaginal molde real + pecho gelatina 1:1 + maquillaje permanente (sin deformación) + canal 37.5°C + de pie + esqueleto 48 articulaciones (cualquier pose) + nalgas gelatina 1:1 + canales uterinos dobles + vibración vaginal y vello púbico opcionales.',
+      v2: 'Aprox. 34kg, 163cm, cuerpo sólido, sin inflar. Vaginal, anal, pecho, mano, pie y oral + pelo realista + diseño vaginal molde real + pecho gelatina 1:1 + de pie + maquillaje permanente + canal 37.5°C + esqueleto 56 articulaciones (2026, cualquier posición) + nalgas gelatina 1:1 + autolubricante (sin lubricante) + canales uterinos dobles.',
     },
     p3: {
-      v1: 'You can choose the doll’s appearance (e.g. celebrity look). Doll function customization (add-on options, price in USDT): Standing 25 · Pubic hair 25 · Smart voice 75 · Vibrating hip 100 · Thigh split 125 · Meridian/vessels 125 · Full-body heating 125 · Lower body clamp/suction 125 · Finger bones 200 · Deep throat oral 250 · Nodding oral 250 · Waist twist 300 · Hair implant 500.',
+      v1: 'Puedes elegir la apariencia (ej. look celebridad). Opciones (USDT): De pie 25 · Vello púbico 25 · Voz inteligente 75 · Cadera vibrante 100 · Muslo separable 125 · Meridianos/vasos 125 · Calefacción cuerpo 125 · Succión/clamp inferior 125 · Huesos dedos 200 · Garganta profunda 250 · Oral asentir 250 · Torsión cintura 300 · Implante pelo 500.',
       v2: '',
     },
-    p4: { v1: 'Jissbon Storm Pro male masturbator: 40mm extended stroke, 6 auto-stroke + 12 vibration modes, adjustable rhythm.', v2: '' },
-    p5: { v1: 'Full-auto penis masturbator for women, automatic thrusting adult toy.', v2: '' },
-    p6: { v1: 'Vibrating AV stick, women’s massager and vibrator with strong electric vibration.', v2: '' },
+    p4: { v1: 'Jissbon Storm Pro masturbador masculino: carrera 40mm, 6 auto + 12 modos vibración, ritmo ajustable.', v2: '' },
+    p5: { v1: 'Masturbador pene automático para mujeres, juguete adulto de empuje automático.', v2: '' },
+    p6: { v1: 'Vibrador AV stick, masajeador y vibrador femenino de fuerte vibración.', v2: '' },
   },
 } as unknown as EnKeys
