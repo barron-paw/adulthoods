@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useI18n } from '../i18n/context'
 import { BNB_PAYMENT_ADDRESS } from '../config/payment'
 import type { Product } from '../types'
@@ -24,6 +24,19 @@ export default function ProductCard({ product }: ProductCardProps) {
   const [selectedVariantId, setSelectedVariantId] = useState(product.defaultVariantId)
   const [p3SelectedIds, setP3SelectedIds] = useState<string[]>([])
   const [mediaTab, setMediaTab] = useState<MediaTab>('image')
+  const [videoInView, setVideoInView] = useState(false)
+  const videoWrapRef = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    if (!hasVideo || mediaTab !== 'video') return
+    const el = videoWrapRef.current
+    if (!el) return
+    const obs = new IntersectionObserver(
+      ([e]) => setVideoInView(e.isIntersecting),
+      { rootMargin: '100px', threshold: 0.1 }
+    )
+    obs.observe(el)
+    return () => obs.disconnect()
+  }, [hasVideo, mediaTab])
   const [hash, setHash] = useState('')
   const [address, setAddress] = useState('')
   const [phone, setPhone] = useState('')
@@ -116,7 +129,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             {t.product.video}
           </button>
         </div>
-        <div className="flex-1 min-h-0 min-w-0 relative flex items-center justify-center">
+        <div ref={videoWrapRef} className="flex-1 min-h-0 min-w-0 relative flex items-center justify-center">
           {mediaTab === 'video' ? (
             hasVideo ? (
               videoError ? (
@@ -133,9 +146,9 @@ export default function ProductCard({ product }: ProductCardProps) {
               ) : (
                 <video
                   key={`${product.id}-${videoSrc}`}
-                  src={videoSrc}
+                  src={videoInView ? videoSrc : undefined}
                   controls
-                  preload="metadata"
+                  preload={videoInView ? 'metadata' : 'none'}
                   poster={product.images?.[0]}
                   playsInline
                   className="absolute inset-0 w-full h-full object-contain"
