@@ -107,7 +107,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             {t.product.video}
           </button>
         </div>
-        <div className="flex-1 flex items-center justify-center text-stone-500 text-sm min-h-0">
+        <div className="flex-1 min-h-0 min-w-0 relative flex items-center justify-center">
           {mediaTab === 'video' ? (
             hasVideo ? (
               videoError ? (
@@ -129,7 +129,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                   preload="metadata"
                   poster={product.images?.[0]}
                   playsInline
-                  className="max-w-full max-h-full object-contain"
+                  className="absolute inset-0 w-full h-full object-contain"
                   onError={() => setVideoError(true)}
                 />
               )
@@ -144,7 +144,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                 key={currentImgSrc}
                 src={currentImgSrc}
                 alt={(t.productNames as Record<string, string>)?.[product.id] ?? product.name}
-                className="w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover"
                 onError={handleImgError}
               />
             )

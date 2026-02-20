@@ -36,7 +36,7 @@ export const placeholderProducts: Product[] = [
   {
     id: 'p3',
     name: '产品3',
-    description: '娃娃功能定制：可选配站立、植阴毛、智能语音、震动抖臀、大腿拆分、经络血管、全身加温、下体夹吸、手指骨、深喉口交、点头口交、扭腰、植发等，每项价格见下方描述（原价÷4 以 USDT 计）。',
+    description: '娃娃功能定制：可选择 Sex Doll 外貌（例如明星脸/身材），私人订制专属外观；可选配站立、植阴毛、智能语音等，每项价格见下方描述（原价÷4 以 USDT 计）。',
     images: [`${IMAGE_BASE}/5.png`],
     videoUrl: `${VIDEO_BASE}/6.MP4?v=6`,
     defaultVariantId: 'v1',

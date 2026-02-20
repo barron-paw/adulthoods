@@ -87,6 +87,8 @@ export const en = {
     p3: {
       v1: `Doll function customization (add-on options, price in USDT):
 
+You can choose the sex doll’s appearance (e.g. celebrity look) for a custom look.
+
 Standing · 25 USDT
 Three studs at the bottom of the feet for standing. Choose carefully if you mind.
 

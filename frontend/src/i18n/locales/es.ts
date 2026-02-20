@@ -84,7 +84,7 @@ export const es = {
       v2: 'Approx. 34kg, 163cm height, full-body solid, no inflation. Supports vaginal, anal, breast, hand, foot and oral + realistic hair + real-life cast integrated vaginal design + 1:1 jelly chest + standing + 1:1 permanent fine makeup (no deformation) + channel heating 37.5°C + built-in metal skeleton 56 joints (2026 new frame, any position) + 1:1 jelly butt + self-lubricating (no lube needed, smoother with use, sustained pleasure) + real-life cast dual uterine channels.',
     },
     p3: {
-      v1: 'Doll function customization (add-on options, price in USDT): Standing 25 · Pubic hair 25 · Smart voice 75 · Vibrating hip 100 · Thigh split 125 · Meridian/vessels 125 · Full-body heating 125 · Lower body clamp/suction 125 · Finger bones 200 · Deep throat oral 250 · Nodding oral 250 · Waist twist 300 · Hair implant 500.',
+      v1: 'You can choose the doll’s appearance (e.g. celebrity look). Doll function customization (add-on options, price in USDT): Standing 25 · Pubic hair 25 · Smart voice 75 · Vibrating hip 100 · Thigh split 125 · Meridian/vessels 125 · Full-body heating 125 · Lower body clamp/suction 125 · Finger bones 200 · Deep throat oral 250 · Nodding oral 250 · Waist twist 300 · Hair implant 500.',
       v2: '',
     },
     p4: { v1: '', v2: '' },
