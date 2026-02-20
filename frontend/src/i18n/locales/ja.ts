@@ -65,6 +65,15 @@ export const ja = {
     wecomSaved: '保存済み',
   },
   lang: { en: 'English', zh: '中文', ja: '日本語', ko: '한국어', es: 'Español' },
+  productNames: { p1: 'Sex Doll 1', p2: 'Sex Doll 2', p3: 'Sex Doll 3', p4: 'Sex Doll 4', p5: 'Sex Doll 5', p6: 'Sex Doll 6' },
+  productVariantNames: {
+    p1: { v1: '標準版', v2: '延伸版' },
+    p2: { v1: '通常版', v2: '高級版' },
+    p3: { v1: 'スタイル1', v2: 'スタイル2' },
+    p4: { v1: 'バリアントA', v2: 'バリアントB' },
+    p5: { v1: 'バリアントA', v2: 'バリアントB' },
+    p6: { v1: 'バリアントA', v2: 'バリアントB' },
+  },
   productDescriptions: {
     p1: {
       v1: 'スマート会話、オーラル/膣/アナル/胸/手/足対応、手植え毛、28MM皮膚、スマート振動＆88音声、医療用ナノシリコン、処女設計、165CM/12斤、3年保証、折りたたみ30-50cm。',

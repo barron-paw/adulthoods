@@ -63,15 +63,26 @@ export const en = {
     wecomSaved: 'Saved',
   },
   lang: { en: 'English', zh: '中文', ja: '日本語', ko: '한국어', es: 'Español' },
+  /** 产品名称，按语言切换 */
+  productNames: { p1: 'Sex Doll 1', p2: 'Sex Doll 2', p3: 'Sex Doll 3', p4: 'Sex Doll 4', p5: 'Sex Doll 5', p6: 'Sex Doll 6' },
+  /** 各产品各款式的名称（Style 下拉），按语言切换。key: productId -> variantId */
+  productVariantNames: {
+    p1: { v1: 'Standard', v2: 'Extended' },
+    p2: { v1: 'Standard', v2: 'Premium' },
+    p3: { v1: 'Style 1', v2: 'Style 2' },
+    p4: { v1: 'Variant A', v2: 'Variant B' },
+    p5: { v1: 'Variant A', v2: 'Variant B' },
+    p6: { v1: 'Variant A', v2: 'Variant B' },
+  },
   /** 各产品各款式的描述，按语言切换。key: productId -> variantId -> 描述文案 */
   productDescriptions: {
     p1: {
-      v1: 'Smart dialogue, oral/vaginal/anal/breast/hand/foot support, hand-made hair implant, 28MM skin, smart vibration & 88 voice lines, medical nano silicone, virgin design, 165CM/12斤, 3-year warranty, folds to 30-50cm.',
-      v2: 'Portable detachable head, oral/vaginal/anal/breast/foot + voice, metal skeleton, custom voice & pubic hair, 37.5°C channel, wax S makeup, jelly chest, lifetime warranty, packs to 1m.',
+      v1: 'Oral sex function with smart dialogue. Supports vaginal, anal, breast, hand, foot and oral + hand-made hair implant + integrated vaginal design + 28MM skin thickness + smart vaginal vibration & moaning + 88 kinds of realistic voice dialogue + medical-grade fine nano soft silicone + virgin design (no bleeding) + 1:1 real-life 165CM height, approx. 6kg weight + realistic silicone chest + 3hr charge for 7–8hr dialogue + 3-year warranty + leg fold storage 30–50cm.',
+      v2: 'Portable detachable head + oral sex function with voice/sound + supports vaginal, anal, breast, foot and oral + realistic wig + integrated vaginal design + built-in metal skeleton + custom smart voice & pubic hair implant + channel constant 37.5°C + medical-grade fine nano soft silicone + 1:1 real-life wax S makeup + realistic jelly chest + adjustable limbs + lifetime warranty + case storage 1m.',
     },
     p2: {
-      v1: '60斤, 153cm, full-body. Vaginal/anal/breast/hand/foot/oral, real hair, dual-channel, 37.5°C, standing, 48-joint skeleton, jelly butt, custom vibration & pubic hair.',
-      v2: '68斤, 163cm. 56-joint 2026 skeleton, self-lubricating, dual-channel; other specs as standard.',
+      v1: 'Approx. 30kg, 153cm height, full-body solid, no inflation. Supports vaginal, anal, breast, hand, foot and oral + realistic hair + real-life cast integrated vaginal design + 1:1 jelly chest + 1:1 permanent fine makeup (no deformation) + channel heating 37.5°C + standing + built-in metal skeleton 48 joints (any pose) + 1:1 jelly butt + real-life cast dual uterine channels + custom smart vaginal vibration clamp & pubic hair implant.',
+      v2: 'Approx. 34kg, 163cm height, full-body solid, no inflation. Supports vaginal, anal, breast, hand, foot and oral + realistic hair + real-life cast integrated vaginal design + 1:1 jelly chest + standing + 1:1 permanent fine makeup (no deformation) + channel heating 37.5°C + built-in metal skeleton 56 joints (2026 new frame, any position) + 1:1 jelly butt + self-lubricating (no lube needed, smoother with use, sustained pleasure) + real-life cast dual uterine channels.',
     },
     p3: { v1: '', v2: '' },
     p4: { v1: '', v2: '' },

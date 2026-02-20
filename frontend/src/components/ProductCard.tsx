@@ -143,7 +143,7 @@ export default function ProductCard({ product }: ProductCardProps) {
               <img
                 key={currentImgSrc}
                 src={currentImgSrc}
-                alt={product.name}
+                alt={(t.productNames as Record<string, string>)?.[product.id] ?? product.name}
                 className="w-full h-full object-cover"
                 onError={handleImgError}
               />
@@ -155,7 +155,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       </div>
 
       <div className="p-4 flex-1 flex flex-col min-h-0">
-        <h3 className="font-semibold text-stone-100 mb-1">{product.name}</h3>
+        <h3 className="font-semibold text-stone-100 mb-1">{(t.productNames as Record<string, string>)?.[product.id] ?? product.name}</h3>
         {(() => {
           const descByLocale = t.productDescriptions?.[product.id as keyof typeof t.productDescriptions] as Record<string, string> | undefined
           const desc = (descByLocale?.[selectedVariant.id] && descByLocale[selectedVariant.id]) || selectedVariant.description || product.description
@@ -169,20 +169,24 @@ export default function ProductCard({ product }: ProductCardProps) {
         <div className="mb-3">
           <span className="text-stone-500 text-sm mr-2">{t.product.style}: </span>
           <div className="flex flex-wrap gap-2 mt-1">
-            {product.variants.map((v) => (
-              <button
-                key={v.id}
-                type="button"
-                onClick={() => setSelectedVariantId(v.id)}
-                className={`px-3 py-1.5 rounded-lg text-sm border transition-colors ${
-                  selectedVariantId === v.id
-                    ? 'border-rose-500 bg-rose-500/20 text-rose-400'
-                    : 'border-stone-600 text-stone-400 hover:border-stone-500'
-                }`}
-              >
-                {v.name} · {v.price}
-              </button>
-            ))}
+            {product.variants.map((v) => {
+              const variantNames = t.productVariantNames?.[product.id as keyof typeof t.productVariantNames] as Record<string, string> | undefined
+              const displayName = (variantNames?.[v.id] && variantNames[v.id]) ? variantNames[v.id] : v.name
+              return (
+                <button
+                  key={v.id}
+                  type="button"
+                  onClick={() => setSelectedVariantId(v.id)}
+                  className={`px-3 py-1.5 rounded-lg text-sm border transition-colors ${
+                    selectedVariantId === v.id
+                      ? 'border-rose-500 bg-rose-500/20 text-rose-400'
+                      : 'border-stone-600 text-stone-400 hover:border-stone-500'
+                  }`}
+                >
+                  {displayName} · {v.price}
+                </button>
+              )
+            })}
           </div>
         </div>
 
