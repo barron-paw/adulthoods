@@ -29,12 +29,12 @@
 
 | 展示名 | 图片 | 视频 |
 |--------|------|------|
-| 产品1 | 1.jpg | 2.MP4 |
-| 产品2 | 3.jpg | 4.MP4 |
-| 产品3 | 5.jpg | 6.MP4 |
-| 产品4 | 7.jpg | 8.MP4 |
-| 产品5 | 9.jpg | 10.MP4（原产品1的图/视） |
-| 产品6 | 11.jpg | 12.MP4 |
+| 产品1 | 1.jpeg | 2.MP4 |
+| 产品2 | 3.JPG | 4.MP4 |
+| 产品3 | 5.png | 6.MP4 |
+| 产品4 | 7.png | 8.MP4 |
+| 产品5 | 9.png | 10.MP4 |
+| 产品6 | 11.png | 12.MP4 |
 
 服务器 `adulthoodgoods/` 目录下需有上述 12 个文件，否则对应产品会“图片/视频加载失败”。
 
@@ -49,3 +49,23 @@
 3. 重新构建并部署前端（或 push 到 GitHub 触发 Vercel 部署）。
 
 之后**图片**从 `https://www.adulthood.me/goods/1.jpeg` 等加载，**视频**仍从 api.adulthood.me/adulthoodgoods/ 加载。
+
+---
+
+## 图片/视频不显示时逐项检查
+
+**图片（1、3、5、7、9、11）不显示：**
+
+1. **文件名必须与代码一致**（区分大小写）：  
+   `frontend/public/goods/` 下要有：`1.jpeg`、`3.JPG`、`5.png`、`7.png`、`9.png`、`11.png`。
+2. **确认图片已提交到 GitHub**：在仓库里点进 `frontend/public/goods/`，能看到上述 6 个文件（不能只在本机有、没 push）。
+3. **Vercel 环境变量**：在 Vercel 项目里设置 **`VITE_GOODS_FROM_PUBLIC=true`**，保存后重新部署（Redeploy）。
+4. **Vercel 构建目录**：若仓库根目录不是 frontend，在 Vercel 的 **Root Directory** 填 `frontend`，**Build Output** 为 `dist`，这样构建后线上才有 `/goods/` 目录。
+5. 部署完成后用无痕或 **Ctrl+Shift+R** 强刷，直接打开 `https://你的域名/goods/1.jpeg` 看能否打开图片。
+
+**视频（2、4、6、8、10、12）不显示：**
+
+1. **云服务器** `adulthoodgoods/` 目录下要有：`2.MP4`、`4.MP4`、`6.MP4`、`8.MP4`、`10.MP4`、`12.MP4`（扩展名大写 **MP4**，Linux 区分大小写）。
+2. **Node 服务**：`sudo systemctl status adulthood-api` 为 active，`curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:3000/adulthoodgoods/2.MP4` 返回 200。
+3. **Cloudflare**：SSL 模式选 **Flexible**（源站只开 80 时），否则易 521；必要时清除缓存。
+4. **前端环境变量**：Vercel 里 **`VITE_API_URL`** 为 `https://api.adulthood.me`，否则视频地址会错。
