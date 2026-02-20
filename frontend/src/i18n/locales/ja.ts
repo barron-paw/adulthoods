@@ -69,7 +69,7 @@ export const ja = {
   productVariantNames: {
     p1: { v1: '標準版', v2: '延伸版' },
     p2: { v1: '通常版', v2: '高級版' },
-    p3: { v1: 'スタイル1', v2: 'スタイル2' },
+    p3: { v1: '定制款', v2: '' },
     p4: { v1: 'バリアントA', v2: 'バリアントB' },
     p5: { v1: 'バリアントA', v2: 'バリアントB' },
     p6: { v1: 'バリアントA', v2: 'バリアントB' },
@@ -83,7 +83,10 @@ export const ja = {
       v1: '重约60斤，身高153cm，全实体，无须充气。支持阴交 肛交 乳交 手交 足交 口交+仿真人头发+真人倒模阴道一体式设计+真人一比一果冻胸+真人一比一永久精致妆容（永不变形）+通道加热恒温37.5°C+站立功能+内置金属骨架48个关节（姿势任摆）+一比一果冻臀部+真人倒模双子宫通道+可私人定制智能阴道震动夹吸和私处植毛',
       v2: '重约68斤，身高163cm，全实体，无须充气。支持阴交 肛交 乳交 手交 足交 口交+仿真人头发+真人倒模阴道一体式设计+真人一比一果冻胸+站立功能+真人一比一永久精致妆容（永不变形）+通道加热恒温37.5°C+内置金属骨架56个关节（2026年新款骨架，可体验日本女优般任意姿势体位）+一比一果冻臀部+自润滑自高潮（无需添加润滑剂，越插越滑，持续快感体验）+真人倒模双子宫通道',
     },
-    p3: { v1: '', v2: '' },
+    p3: {
+      v1: 'Doll function customization (add-on options, price in USDT): Standing 25 · Pubic hair 25 · Smart voice 75 · Vibrating hip 100 · Thigh split 125 · Meridian/vessels 125 · Full-body heating 125 · Lower body clamp/suction 125 · Finger bones 200 · Deep throat oral 250 · Nodding oral 250 · Waist twist 300 · Hair implant 500.',
+      v2: '',
+    },
     p4: { v1: '', v2: '' },
     p5: { v1: '', v2: '' },
     p6: { v1: '', v2: '' },

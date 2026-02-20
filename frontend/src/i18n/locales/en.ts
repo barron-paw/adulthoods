@@ -69,7 +69,7 @@ export const en = {
   productVariantNames: {
     p1: { v1: 'Standard', v2: 'Extended' },
     p2: { v1: 'Standard', v2: 'Premium' },
-    p3: { v1: 'Style 1', v2: 'Style 2' },
+    p3: { v1: 'Custom', v2: '' },
     p4: { v1: 'Variant A', v2: 'Variant B' },
     p5: { v1: 'Variant A', v2: 'Variant B' },
     p6: { v1: 'Variant A', v2: 'Variant B' },
@@ -84,7 +84,49 @@ export const en = {
       v1: 'Approx. 30kg, 153cm height, full-body solid, no inflation. Supports vaginal, anal, breast, hand, foot and oral + realistic hair + real-life cast integrated vaginal design + 1:1 jelly chest + 1:1 permanent fine makeup (no deformation) + channel heating 37.5°C + standing + built-in metal skeleton 48 joints (any pose) + 1:1 jelly butt + real-life cast dual uterine channels + custom smart vaginal vibration clamp & pubic hair implant.',
       v2: 'Approx. 34kg, 163cm height, full-body solid, no inflation. Supports vaginal, anal, breast, hand, foot and oral + realistic hair + real-life cast integrated vaginal design + 1:1 jelly chest + standing + 1:1 permanent fine makeup (no deformation) + channel heating 37.5°C + built-in metal skeleton 56 joints (2026 new frame, any position) + 1:1 jelly butt + self-lubricating (no lube needed, smoother with use, sustained pleasure) + real-life cast dual uterine channels.',
     },
-    p3: { v1: '', v2: '' },
+    p3: {
+      v1: `Doll function customization (add-on options, price in USDT):
+
+Standing · 25 USDT
+Three studs at the bottom of the feet for standing. Choose carefully if you mind.
+
+Pubic hair implant · 25 USDT
+Simulates real pubic hair, hand-implanted.
+
+Smart voice · 75 USDT
+Touch-sensitive sound; effect varies with motion, supports dialogue.
+
+Vibrating hip shake · 100 USDT
+Two built-in high-power motors for tremor effect.
+
+Thigh split · 125 USDT
+Good choice if storage space is limited or for portability.
+
+Meridian & blood vessels · 125 USDT
+Restores vessels and meridians for more realistic detail and visual experience.
+
+Full-body heating · 125 USDT
+Standard heating effect; similar to an electric blanket on the market.
+
+Lower body clamp & suction · 125 USDT
+Internal clamping and sucking in the channel, with sensory sound.
+
+Finger bones · 200 USDT
+Alloy finger joints, bendable for gestures (fist, etc.) and holding light items; more realistic.
+
+Deep throat oral · 250 USDT
+Realistic face, passage inside mouth, teeth and tongue detail, movable chin.
+
+Nodding oral · 250 USDT
+Simulates real oral sex for ultimate experience.
+
+Waist twist · 300 USDT
+Simulates real waist twisting. Note: Available for 158cm and above.
+
+Hair implant · 500 USDT
+Hand-implanted hair, eyebrows and eyelashes for a more beautiful look.`,
+      v2: '',
+    },
     p4: { v1: '', v2: '' },
     p5: { v1: '', v2: '' },
     p6: { v1: '', v2: '' },

@@ -123,7 +123,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                 </div>
               ) : (
                 <video
-                  key={videoSrc}
+                  key={`${product.id}-${videoSrc}`}
                   src={videoSrc}
                   controls
                   preload="metadata"
