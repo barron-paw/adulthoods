@@ -64,15 +64,15 @@ export const en = {
   },
   lang: { en: 'English', zh: '中文', ja: '日本語', ko: '한국어', es: 'Español' },
   /** 产品名称，按语言切换 */
-  productNames: { p1: 'Sex Doll 1', p2: 'Sex Doll 2', p3: 'Sex Doll 3', p4: 'Sex Doll 4', p5: 'Sex Doll 5', p6: 'Sex Doll 6' },
+  productNames: { p1: 'Sex Doll 1', p2: 'Sex Doll 2', p3: 'Sex Doll 3', p4: 'Male masturbator', p5: 'Automatic penis', p6: 'AV stick' },
   /** 各产品各款式的名称（Style 下拉），按语言切换。key: productId -> variantId */
   productVariantNames: {
     p1: { v1: 'Standard', v2: 'Extended' },
     p2: { v1: 'Standard', v2: 'Premium' },
     p3: { v1: 'Custom', v2: '' },
-    p4: { v1: 'Variant A', v2: 'Variant B' },
-    p5: { v1: 'Variant A', v2: 'Variant B' },
-    p6: { v1: 'Variant A', v2: 'Variant B' },
+    p4: { v1: 'Standard', v2: '' },
+    p5: { v1: 'Standard', v2: '' },
+    p6: { v1: 'Standard', v2: '' },
   },
   /** 各产品各款式的描述，按语言切换。key: productId -> variantId -> 描述文案 */
   productDescriptions: {
@@ -129,9 +129,9 @@ Hair implant · 500 USDT
 Hand-implanted hair, eyebrows and eyelashes for a more beautiful look.`,
       v2: '',
     },
-    p4: { v1: '', v2: '' },
-    p5: { v1: '', v2: '' },
-    p6: { v1: '', v2: '' },
+    p4: { v1: 'Jissbon Storm Pro male masturbator: 40mm extended stroke, 6 auto-stroke + 12 vibration modes, adjustable rhythm.', v2: '' },
+    p5: { v1: 'Full-auto penis masturbator for women, automatic thrusting adult toy.', v2: '' },
+    p6: { v1: 'Vibrating AV stick, women’s massager and vibrator with strong electric vibration.', v2: '' },
   },
 }
 
