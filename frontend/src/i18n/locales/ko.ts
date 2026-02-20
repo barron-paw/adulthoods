@@ -26,6 +26,7 @@ export const ko = {
     verifyTitle: '결제 확인 (USDT 거래 해시)',
     verifyPlaceholder: '결제 후 해시를 붙여넣어 확인',
     verify: '확인',
+    verifyAmountHint: '결제 금액이 상품 가격 이상이어야 확인됩니다.',
     images: '이미지',
     video: '동영상',
     imagePlaceholder: '[이미지/동영상]',
@@ -38,6 +39,13 @@ export const ko = {
     phonePlaceholder: '전화번호',
     remarks: '비고',
     remarksPlaceholder: '배송 메모 (선택)',
+    customQuote: '견적 문의',
+    customOptionsLabel: '옵션 선택 (가격 USDT)',
+    customTotalLabel: '합계',
+    p3BaseLabel: '기본 500 USDT',
+  },
+  p3OptionNames: {
+    stand: '站立', pubic: '植阴毛', voice: '智能语音', hip: '震动抖臀', thigh: '大腿拆分', vessel: '经络血管', heat: '全身加温', clamp: '下体夹吸', finger: '手指骨', deep: '深喉口交', nod: '点头口交', waist: '扭腰', hair: '植发',
   },
   admin: {
     title: '관리',

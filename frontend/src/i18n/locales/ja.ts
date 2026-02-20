@@ -26,6 +26,7 @@ export const ja = {
     verifyTitle: '支払い確認（USDT取引ハッシュ）',
     verifyPlaceholder: '支払い後にハッシュを貼り付けて確認',
     verify: '確認',
+    verifyAmountHint: '支払額が商品価格以上である必要があります。',
     images: '画像',
     video: '動画',
     imagePlaceholder: '[画像・動画]',
@@ -38,6 +39,13 @@ export const ja = {
     phonePlaceholder: '電話番号',
     remarks: '備考',
     remarksPlaceholder: '配送メモ（任意）',
+    customQuote: 'お見積り',
+    customOptionsLabel: 'オプション選択（価格 USDT）',
+    customTotalLabel: '合計',
+    p3BaseLabel: '基本 500 USDT',
+  },
+  p3OptionNames: {
+    stand: '站立', pubic: '植阴毛', voice: '智能语音', hip: '震动抖臀', thigh: '大腿拆分', vessel: '经络血管', heat: '全身加温', clamp: '下体夹吸', finger: '手指骨', deep: '深喉口交', nod: '点头口交', waist: '扭腰', hair: '植发',
   },
   admin: {
     title: '管理',

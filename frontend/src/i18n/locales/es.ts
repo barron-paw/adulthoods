@@ -26,6 +26,7 @@ export const es = {
     verifyTitle: 'Verificación de pago (hash transacción USDT)',
     verifyPlaceholder: 'Pega el hash después del pago para verificar',
     verify: 'Verificar',
+    verifyAmountHint: 'El importe debe ser ≥ precio del producto para pasar la verificación.',
     images: 'Imágenes',
     video: 'Vídeo',
     imagePlaceholder: '[Imagen / Vídeo]',
@@ -38,6 +39,13 @@ export const es = {
     phonePlaceholder: 'Número de teléfono',
     remarks: 'Observaciones',
     remarksPlaceholder: 'Notas de envío (opcional)',
+    customQuote: 'Presupuesto a consulta',
+    customOptionsLabel: 'Opciones (precio en USDT)',
+    customTotalLabel: 'Total',
+    p3BaseLabel: 'Base 500 USDT',
+  },
+  p3OptionNames: {
+    stand: 'Standing', pubic: 'Pubic hair', voice: 'Smart voice', hip: 'Vibrating hip', thigh: 'Thigh split', vessel: 'Meridian & vessels', heat: 'Full-body heating', clamp: 'Lower body clamp & suction', finger: 'Finger bones', deep: 'Deep throat oral', nod: 'Nodding oral', waist: 'Waist twist', hair: 'Hair implant',
   },
   admin: {
     title: 'Admin',

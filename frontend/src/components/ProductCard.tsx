@@ -5,6 +5,14 @@ import type { Product } from '../types'
 
 const API_BASE = import.meta.env.VITE_API_URL || ''
 
+/** 产品3 定制款：起步价 500 + 可选配置及单价（USDT） */
+const P3_BASE_USDT = 500
+const P3_OPTIONS: { id: string; price: number }[] = [
+  { id: 'stand', price: 25 }, { id: 'pubic', price: 25 }, { id: 'voice', price: 75 }, { id: 'hip', price: 100 },
+  { id: 'thigh', price: 125 }, { id: 'vessel', price: 125 }, { id: 'heat', price: 125 }, { id: 'clamp', price: 125 },
+  { id: 'finger', price: 200 }, { id: 'deep', price: 250 }, { id: 'nod', price: 250 }, { id: 'waist', price: 300 }, { id: 'hair', price: 500 },
+]
+
 interface ProductCardProps {
   product: Product
 }
@@ -14,6 +22,7 @@ type MediaTab = 'image' | 'video'
 export default function ProductCard({ product }: ProductCardProps) {
   const { t } = useI18n()
   const [selectedVariantId, setSelectedVariantId] = useState(product.defaultVariantId)
+  const [p3SelectedIds, setP3SelectedIds] = useState<string[]>([])
   const [mediaTab, setMediaTab] = useState<MediaTab>('image')
   const [hash, setHash] = useState('')
   const [address, setAddress] = useState('')
@@ -166,31 +175,62 @@ export default function ProductCard({ product }: ProductCardProps) {
           ) : null
         })()}
 
-        <div className="mb-3">
-          <span className="text-stone-500 text-sm mr-2">{t.product.style}: </span>
-          <div className="flex flex-wrap gap-2 mt-1">
-            {product.variants.map((v) => {
-              const variantNames = t.productVariantNames?.[product.id as keyof typeof t.productVariantNames] as Record<string, string> | undefined
-              const displayName = (variantNames?.[v.id] && variantNames[v.id]) ? variantNames[v.id] : v.name
-              return (
-                <button
-                  key={v.id}
-                  type="button"
-                  onClick={() => setSelectedVariantId(v.id)}
-                  className={`px-3 py-1.5 rounded-lg text-sm border transition-colors ${
-                    selectedVariantId === v.id
-                      ? 'border-rose-500 bg-rose-500/20 text-rose-400'
-                      : 'border-stone-600 text-stone-400 hover:border-stone-500'
-                  }`}
-                >
-                  {displayName} · {v.price}
-                </button>
-              )
-            })}
-          </div>
-        </div>
-
-        <p className="text-rose-400 font-medium mt-auto">{selectedVariant.price}</p>
+        {product.id === 'p3' ? (
+          <>
+            <p className="text-stone-500 text-sm mb-1">{t.product.style}: {(t.productVariantNames as Record<string, Record<string, string>>)?.[product.id]?.v1 ?? '定制款'}</p>
+            <p className="text-stone-500 text-xs mb-2">{(t.product as Record<string, string>).p3BaseLabel ?? '起步价 500 USDT'}</p>
+            <div className="mb-3 space-y-1.5 max-h-32 overflow-y-auto">
+              <span className="text-stone-500 text-xs">{(t.product as Record<string, string>).customOptionsLabel ?? '可选配置'}</span>
+              {P3_OPTIONS.map((opt) => {
+                const names = t.p3OptionNames as Record<string, string> | undefined
+                const label = names?.[opt.id] ?? opt.id
+                const checked = p3SelectedIds.includes(opt.id)
+                return (
+                  <label key={opt.id} className="flex items-center gap-2 text-sm cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={checked}
+                      onChange={() => setP3SelectedIds((prev) => (prev.includes(opt.id) ? prev.filter((id) => id !== opt.id) : [...prev, opt.id]))}
+                      className="rounded border-stone-600 bg-stone-800 text-rose-500"
+                    />
+                    <span className="text-stone-400">{label}</span>
+                    <span className="text-stone-500 text-xs">+{opt.price} USDT</span>
+                  </label>
+                )
+              })}
+            </div>
+            <p className="text-rose-400 font-medium mt-auto">
+              {(t.product as Record<string, string>).customTotalLabel ?? '合计'}: {P3_BASE_USDT + P3_OPTIONS.filter((o) => p3SelectedIds.includes(o.id)).reduce((s, o) => s + o.price, 0)} USDT
+            </p>
+          </>
+        ) : (
+          <>
+            <div className="mb-3">
+              <span className="text-stone-500 text-sm mr-2">{t.product.style}: </span>
+              <div className="flex flex-wrap gap-2 mt-1">
+                {product.variants.map((v) => {
+                  const variantNames = t.productVariantNames?.[product.id as keyof typeof t.productVariantNames] as Record<string, string> | undefined
+                  const displayName = (variantNames?.[v.id] && variantNames[v.id]) ? variantNames[v.id] : v.name
+                  return (
+                    <button
+                      key={v.id}
+                      type="button"
+                      onClick={() => setSelectedVariantId(v.id)}
+                      className={`px-3 py-1.5 rounded-lg text-sm border transition-colors ${
+                        selectedVariantId === v.id
+                          ? 'border-rose-500 bg-rose-500/20 text-rose-400'
+                          : 'border-stone-600 text-stone-400 hover:border-stone-500'
+                      }`}
+                    >
+                      {displayName} · {v.price}
+                    </button>
+                  )
+                })}
+              </div>
+            </div>
+            <p className="text-rose-400 font-medium mt-auto">{selectedVariant.price}</p>
+          </>
+        )}
 
         <div className="mt-4 pt-4 border-t border-stone-700 space-y-3">
           <p className="text-stone-500 text-xs mb-1">{t.product.paymentAddressLabel}</p>
@@ -206,7 +246,8 @@ export default function ProductCard({ product }: ProductCardProps) {
               {copyFeedback ? t.product.paymentAddressCopied : t.product.paymentAddressCopy}
             </button>
           </div>
-          <p className="text-stone-500 text-xs mb-2">{t.product.verifyTitle}</p>
+          <p className="text-stone-500 text-xs mb-1">{t.product.verifyTitle}</p>
+          <p className="text-amber-500/90 text-xs mb-2">{(t.product as Record<string, string>).verifyAmountHint}</p>
           <input
             type="text"
             value={hash}
