@@ -43,6 +43,8 @@ export default function ProductCard({ product }: ProductCardProps) {
   const currentImgSrc = imgFallbacks[imgSrcIndex]
   const [imgError, setImgError] = useState(false)
   const [videoError, setVideoError] = useState(false)
+  const [videoRetryKey, setVideoRetryKey] = useState(0)
+  const videoSrc = product.videoUrl ? `${product.videoUrl}${product.videoUrl.includes('?') ? '&' : '?'}_=${videoRetryKey}` : ''
   const handleImgError = () => {
     if (imgSrcIndex + 1 < imgFallbacks.length) {
       setImgSrcIndex((i) => i + 1)
@@ -104,11 +106,20 @@ export default function ProductCard({ product }: ProductCardProps) {
           {mediaTab === 'video' ? (
             hasVideo ? (
               videoError ? (
-                <span className="text-xs px-2 text-center">{t.product.videoLoadFailed}</span>
+                <div className="flex flex-col items-center gap-2 px-2">
+                  <span className="text-xs text-center">{t.product.videoLoadFailed}</span>
+                  <button
+                    type="button"
+                    onClick={() => { setVideoError(false); setVideoRetryKey((k) => k + 1) }}
+                    className="text-xs px-3 py-1.5 rounded bg-stone-700 text-stone-300 hover:bg-stone-600"
+                  >
+                    重试
+                  </button>
+                </div>
               ) : (
                 <video
-                  key={product.videoUrl}
-                  src={product.videoUrl}
+                  key={videoSrc}
+                  src={videoSrc}
                   controls
                   preload="metadata"
                   poster={product.images?.[0]}
