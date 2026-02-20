@@ -37,3 +37,15 @@
 | 产品6 | 11.jpg | 12.MP4 |
 
 服务器 `adulthoodgoods/` 目录下需有上述 12 个文件，否则对应产品会“图片/视频加载失败”。
+
+---
+
+## 可选：用同源托管图/视（避免 api 域名加载失败）
+
+若 api.adulthood.me 的图片/视频一直 404 或加载失败，可改为**和前端同域名**托管：
+
+1. 把商品图、视频按文件名放到 **`frontend/public/goods/`**（见该目录下 README.md）。
+2. 在 **Vercel** 或本地 **`.env`** 里增加：**`VITE_GOODS_FROM_PUBLIC=true`**。
+3. 重新构建并部署前端（或 push 到 GitHub 触发 Vercel 部署）。
+
+之后**图片**从 `https://www.adulthood.me/goods/1.jpeg` 等加载，**视频**仍从 api.adulthood.me/adulthoodgoods/ 加载。
