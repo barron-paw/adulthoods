@@ -26,6 +26,7 @@ export default function ProductCard({ product }: ProductCardProps) {
   const [mediaTab, setMediaTab] = useState<MediaTab>('image')
   const [videoInView, setVideoInView] = useState(false)
   const videoWrapRef = useRef<HTMLDivElement>(null)
+  const hasVideo = !!product.videoUrl
   useEffect(() => {
     if (!hasVideo || mediaTab !== 'video') return
     const el = videoWrapRef.current
@@ -53,7 +54,6 @@ export default function ProductCard({ product }: ProductCardProps) {
 
   const selectedVariant = product.variants.find((v) => v.id === selectedVariantId) ?? product.variants[0]
   const hasImages = product.images.length > 0
-  const hasVideo = !!product.videoUrl
   // 图片加载失败时依次尝试 .jpeg / .png / .JPG，兼容服务器实际扩展名
   const baseImg = product.images[0] || ''
   const imgFallbacks = baseImg
@@ -148,7 +148,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                   key={`${product.id}-${videoSrc}`}
                   src={videoInView ? videoSrc : undefined}
                   controls
-                  preload={videoInView ? 'metadata' : 'none'}
+                  preload="none"
                   poster={product.images?.[0]}
                   playsInline
                   className="absolute inset-0 w-full h-full object-contain"
@@ -167,6 +167,8 @@ export default function ProductCard({ product }: ProductCardProps) {
                 src={currentImgSrc}
                 alt={(t.productNames as Record<string, string>)?.[product.id] ?? product.name}
                 className="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
                 onError={handleImgError}
               />
             )

@@ -1,8 +1,10 @@
+import { lazy, Suspense } from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
 import { useI18n } from './i18n/context'
 import type { Locale } from './i18n/context'
 import PublicPage from './pages/PublicPage'
-import AdminPage from './pages/AdminPage'
+
+const AdminPage = lazy(() => import('./pages/AdminPage'))
 
 function App() {
   const { t, locale, setLocale } = useI18n()
@@ -31,10 +33,12 @@ function App() {
         </div>
       </header>
       <main className="flex-1">
-        <Routes>
-          <Route path="/" element={<PublicPage />} />
-          <Route path="/admin" element={<AdminPage />} />
-        </Routes>
+        <Suspense fallback={<div className="max-w-6xl mx-auto px-4 py-8 text-stone-500">…</div>}>
+          <Routes>
+            <Route path="/" element={<PublicPage />} />
+            <Route path="/admin" element={<AdminPage />} />
+          </Routes>
+        </Suspense>
       </main>
       <footer className="border-t border-stone-800 py-4 text-center text-stone-500 text-sm">
         {t.siteName} · {t.footer.tagline}
