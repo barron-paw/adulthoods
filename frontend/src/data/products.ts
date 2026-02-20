@@ -21,7 +21,7 @@ export const placeholderProducts: Product[] = [
     id: 'p2',
     name: '产品2',
     description: 'Product description placeholder.',
-    images: [`${GOODS_BASE}/3.jpg`],
+    images: [`${GOODS_BASE}/3.JPG`],
     videoUrl: `${GOODS_BASE}/4.MP4`,
     defaultVariantId: 'v1',
     variants: [
@@ -57,7 +57,7 @@ export const placeholderProducts: Product[] = [
     id: 'p5',
     name: '产品5',
     description: 'Product description placeholder.',
-    images: [`${GOODS_BASE}/9.jpg`],
+    images: [`${GOODS_BASE}/9.png`],
     videoUrl: `${GOODS_BASE}/10.MP4`,
     defaultVariantId: 'v1',
     variants: [
