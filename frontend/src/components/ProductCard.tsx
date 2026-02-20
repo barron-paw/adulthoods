@@ -44,7 +44,12 @@ export default function ProductCard({ product }: ProductCardProps) {
   const [imgError, setImgError] = useState(false)
   const [videoError, setVideoError] = useState(false)
   const [videoRetryKey, setVideoRetryKey] = useState(0)
-  const videoSrc = product.videoUrl ? `${product.videoUrl}${product.videoUrl.includes('?') ? '&' : '?'}_=${videoRetryKey}` : ''
+  // 首次加载用原始 URL，避免 &_=0 导致部分 CDN/源站异常；仅重试时加 _= 做缓存规避
+  const videoSrc = product.videoUrl
+    ? videoRetryKey === 0
+      ? product.videoUrl
+      : `${product.videoUrl}${product.videoUrl.includes('?') ? '&' : '?'}_=${videoRetryKey}`
+    : ''
   const handleImgError = () => {
     if (imgSrcIndex + 1 < imgFallbacks.length) {
       setImgSrcIndex((i) => i + 1)
@@ -149,11 +154,17 @@ export default function ProductCard({ product }: ProductCardProps) {
         </div>
       </div>
 
-      <div className="p-4 flex-1 flex flex-col">
+      <div className="p-4 flex-1 flex flex-col min-h-0">
         <h3 className="font-semibold text-stone-100 mb-1">{product.name}</h3>
-        {product.description && (
-          <p className="text-stone-500 text-sm mb-3 line-clamp-2">{product.description}</p>
-        )}
+        {(() => {
+          const descByLocale = t.productDescriptions?.[product.id as keyof typeof t.productDescriptions] as Record<string, string> | undefined
+          const desc = (descByLocale?.[selectedVariant.id] && descByLocale[selectedVariant.id]) || selectedVariant.description || product.description
+          return desc ? (
+            <div className="text-stone-500 text-sm mb-3 overflow-y-auto max-h-24 min-h-[2.5rem]">
+              <p className="whitespace-pre-line">{desc}</p>
+            </div>
+          ) : null
+        })()}
 
         <div className="mb-3">
           <span className="text-stone-500 text-sm mr-2">{t.product.style}: </span>

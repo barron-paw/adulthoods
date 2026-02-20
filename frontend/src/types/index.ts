@@ -3,6 +3,8 @@ export interface ProductVariant {
   name: string
   price: string
   priceWei?: string
+  /** 该款式的详细描述，点击款式时自动切换显示 */
+  description?: string
 }
 
 export interface Product {

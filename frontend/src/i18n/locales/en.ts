@@ -63,6 +63,21 @@ export const en = {
     wecomSaved: 'Saved',
   },
   lang: { en: 'English', zh: '中文', ja: '日本語', ko: '한국어', es: 'Español' },
+  /** 各产品各款式的描述，按语言切换。key: productId -> variantId -> 描述文案 */
+  productDescriptions: {
+    p1: {
+      v1: 'Smart dialogue, oral/vaginal/anal/breast/hand/foot support, hand-made hair implant, 28MM skin, smart vibration & 88 voice lines, medical nano silicone, virgin design, 165CM/12斤, 3-year warranty, folds to 30-50cm.',
+      v2: 'Portable detachable head, oral/vaginal/anal/breast/foot + voice, metal skeleton, custom voice & pubic hair, 37.5°C channel, wax S makeup, jelly chest, lifetime warranty, packs to 1m.',
+    },
+    p2: {
+      v1: '60斤, 153cm, full-body. Vaginal/anal/breast/hand/foot/oral, real hair, dual-channel, 37.5°C, standing, 48-joint skeleton, jelly butt, custom vibration & pubic hair.',
+      v2: '68斤, 163cm. 56-joint 2026 skeleton, self-lubricating, dual-channel; other specs as standard.',
+    },
+    p3: { v1: '', v2: '' },
+    p4: { v1: '', v2: '' },
+    p5: { v1: '', v2: '' },
+    p6: { v1: '', v2: '' },
+  },
 }
 
 export type EnKeys = typeof en
