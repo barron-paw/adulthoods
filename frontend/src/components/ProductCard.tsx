@@ -32,8 +32,24 @@ export default function ProductCard({ product }: ProductCardProps) {
   const selectedVariant = product.variants.find((v) => v.id === selectedVariantId) ?? product.variants[0]
   const hasImages = product.images.length > 0
   const hasVideo = !!product.videoUrl
+  // 图片加载失败时依次尝试 .jpeg / .png / .JPG，兼容服务器实际扩展名
+  const baseImg = product.images[0] || ''
+  const imgFallbacks = baseImg
+    ? [baseImg, baseImg.replace(/\.(jpg|jpeg|png|gif|webp)$/i, '.jpeg'), baseImg.replace(/\.(jpg|jpeg|png|gif|webp)$/i, '.png'), baseImg.replace(/\.(jpg|jpeg|png|gif|webp)$/i, '.JPG')].filter(
+        (u, i, a) => a.indexOf(u) === i
+      )
+    : []
+  const [imgSrcIndex, setImgSrcIndex] = useState(0)
+  const currentImgSrc = imgFallbacks[imgSrcIndex]
   const [imgError, setImgError] = useState(false)
   const [videoError, setVideoError] = useState(false)
+  const handleImgError = () => {
+    if (imgSrcIndex + 1 < imgFallbacks.length) {
+      setImgSrcIndex((i) => i + 1)
+    } else {
+      setImgError(true)
+    }
+  }
 
   const handleVerify = async () => {
     const trimmedHash = hash.trim()
@@ -108,10 +124,11 @@ export default function ProductCard({ product }: ProductCardProps) {
               <span className="text-xs px-2 text-center">{t.product.imageLoadFailed}</span>
             ) : (
               <img
-                src={product.images[0]}
+                key={currentImgSrc}
+                src={currentImgSrc}
                 alt={product.name}
                 className="w-full h-full object-cover"
-                onError={() => setImgError(true)}
+                onError={handleImgError}
               />
             )
           ) : (
