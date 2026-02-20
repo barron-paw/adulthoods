@@ -3,7 +3,7 @@ import type { Product } from '../types'
 const API_BASE = (import.meta.env.VITE_API_URL || 'https://api.adulthood.me').replace(/\/$/, '')
 const GOODS_BASE = `${API_BASE}/adulthoodgoods`
 
-// 媒体顺序：产品1→1,2 产品2→3,4 产品3→5,6 产品4→7,8 产品5→9,10 产品6→11,12（你已按此顺序上传）
+// 顺序：产品1(1,2) 产品2(3,4) 产品3(5,6) 产品4(7,8) 产品5(9,10) 产品6(11,12)。原产品1的图/视已改为9、10→显示在产品5。
 export const placeholderProducts: Product[] = [
   {
     id: 'p1',

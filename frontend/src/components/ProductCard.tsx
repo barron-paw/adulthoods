@@ -93,6 +93,9 @@ export default function ProductCard({ product }: ProductCardProps) {
                 <video
                   src={product.videoUrl}
                   controls
+                  preload="metadata"
+                  poster={product.images?.[0]}
+                  playsInline
                   className="max-w-full max-h-full object-contain"
                   onError={() => setVideoError(true)}
                 />
