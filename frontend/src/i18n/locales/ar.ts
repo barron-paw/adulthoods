@@ -96,19 +96,19 @@ export const ar = {
   },
   productDescriptions: {
     p1: {
-      v1: 'Oral sex function with smart dialogue. Supports vaginal, anal, breast, hand, foot and oral + hand-made hair implant + integrated vaginal design + 28MM skin thickness + smart vaginal vibration & moaning + 88 kinds of realistic voice dialogue + medical-grade fine nano soft silicone + virgin design (no bleeding) + 1:1 real-life 165CM height, approx. 6kg weight + realistic silicone chest + 3hr charge for 7–8hr dialogue + 3-year warranty + leg fold storage 30–50cm.',
-      v2: 'Portable detachable head + oral sex function with voice/sound + supports vaginal, anal, breast, foot and oral + realistic wig + integrated vaginal design + built-in metal skeleton + custom smart voice & pubic hair implant + channel constant 37.5°C + medical-grade fine nano soft silicone + 1:1 real-life wax S makeup + realistic jelly chest + adjustable limbs + lifetime warranty + case storage 1m.',
+      v1: 'وظيفة فموية مع حوار ذكي. دعم مهبلي/شرجي/صدر/يد/قدم/فموي + زرع شعر يدوي + تصميم مهبلي متكامل + جلد 28مم + اهتزاز وهمهمة ذكية + 88 صوتاً واقعياً + سيليكون نانو طبي + تصميم عذراء (بدون نزيف) + ارتفاع 165سم 1:1، وزن ~6كغ + صدر سيليكون + شحن 3س لـ 7–8س حوار + ضمان 3 سنوات + طي الساق 30–50سم.',
+      v2: 'رأس قابل للفك محمول + وظيفة فموية مع صوت/صوت. مهبلي/شرجي/صدر/قدم/فموي + شعر مستعار واقعي + تصميم مهبلي متكامل + هيكل معدني مدمج + صوت ذكي وزرع شعر العانة + قناة 37.5°م + سيليكون نانو + مكياج شمع S 1:1 + صدر هلامي + أطراف قابلة للتعديل + ضمان مدى الحياة + علبة 1م.',
     },
     p2: {
-      v1: 'Approx. 30kg, 153cm height, full-body solid, no inflation. Supports vaginal, anal, breast, hand, foot and oral + realistic hair + real-life cast integrated vaginal design + 1:1 jelly chest + 1:1 permanent fine makeup (no deformation) + channel heating 37.5°C + standing + built-in metal skeleton 48 joints (any pose) + 1:1 jelly butt + real-life cast dual uterine channels + custom smart vaginal vibration clamp & pubic hair implant.',
-      v2: 'Approx. 34kg, 163cm height, full-body solid, no inflation. Supports vaginal, anal, breast, hand, foot and oral + realistic hair + real-life cast integrated vaginal design + 1:1 jelly chest + standing + 1:1 permanent fine makeup (no deformation) + channel heating 37.5°C + built-in metal skeleton 56 joints (2026 new frame, any position) + 1:1 jelly butt + self-lubricating (no lube needed, smoother with use, sustained pleasure) + real-life cast dual uterine channels.',
+      v1: 'حوالي 30كغ، ارتفاع 153سم، جسم كامل صلب، بدون نفخ. مهبلي/شرجي/صدر/يد/قدم/فموي + شعر واقعي + تصميم مهبلي مصبوب + صدر هلامي 1:1 + مكياج دائم (بدون تشوه) + تسخين قناة 37.5°م + وقوف + هيكل 48 مفصلاً (أي وضع) + أرداف هلامية 1:1 + قناتان رحميتان + اهتزاز مهبلي وزرع شعر العانة اختياري.',
+      v2: 'حوالي 34كغ، ارتفاع 163سم، جسم كامل صلب، بدون نفخ. مهبلي/شرجي/صدر/يد/قدم/فموي + شعر واقعي + تصميم مهبلي مصبوب + صدر هلامي 1:1 + وقوف + مكياج دائم + قناة 37.5°م + هيكل 56 مفصلاً (2026، أي وضع) + أرداف هلامية 1:1 + ذاتي التزليق (بدون مزلق) + قناتان رحميتان.',
     },
     p3: {
-      v1: `You can choose the doll's appearance (e.g. celebrity look). Custom options (price in USDT): Standing 25 · Pubic hair 25 · Smart voice 75 · Vibrating hip 100 · Thigh split 125 · Meridian/vessels 125 · Full-body heating 125 · Lower body clamp/suction 125 · Finger bones 200 · Deep throat oral 250 · Nodding oral 250 · Waist twist 300 · Hair implant 500.`,
+      v1: 'يمكنك اختيار مظهر الدمية (مثلاً شكل مشهور). خيارات (USDT): وقوف 25 · شعر العانة 25 · صوت ذكي 75 · اهتزاز الورك 100 · فصل الفخذ 125 · أوعية/مسارات 125 · تسخين كامل 125 · ضغط/شفط سفلي 125 · عظام أصابع 200 · عمق الحلق 250 · إيماءة فموية 250 · لف الخصر 300 · زرع الشعر 500.',
       v2: '',
     },
-    p4: { v1: 'Jissbon Storm Pro male masturbator: 40mm extended stroke, 6 auto-stroke + 12 vibration modes, adjustable rhythm.', v2: '' },
-    p5: { v1: 'Full-auto penis masturbator for women, automatic thrusting adult toy.', v2: '' },
-    p6: { v1: 'Vibrating AV stick, women’s massager and vibrator with strong electric vibration.', v2: '' },
+    p4: { v1: 'جيسبون ستورم برو مستمني ذكري: شوط 40مم، 6 أوتوماتيك + 12 وضع اهتزاز، إيقاع قابل للتعديل.', v2: '' },
+    p5: { v1: 'مستمني قضيب أوتوماتيكي للنساء، لعبة بالغين دفع أوتوماتيكي.', v2: '' },
+    p6: { v1: 'عصا AV اهتزازية، مدلك واهتزاز نسائي بقوة عالية.', v2: '' },
   },
 } as unknown as EnKeys
