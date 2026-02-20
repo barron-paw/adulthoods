@@ -107,6 +107,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                 <span className="text-xs px-2 text-center">{t.product.videoLoadFailed}</span>
               ) : (
                 <video
+                  key={product.videoUrl}
                   src={product.videoUrl}
                   controls
                   preload="metadata"
