@@ -45,7 +45,7 @@ export const ko = {
     p3BaseLabel: '기본 500 USDT',
   },
   p3OptionNames: {
-    stand: '站立', pubic: '植阴毛', voice: '智能语音', hip: '震动抖臀', thigh: '大腿拆分', vessel: '经络血管', heat: '全身加温', clamp: '下体夹吸', finger: '手指骨', deep: '深喉口交', nod: '点头口交', waist: '扭腰', hair: '植发',
+    stand: '서기', pubic: '음모 이식', voice: '스마트 음성', hip: '진동 힙', thigh: '허벅지 분리', vessel: '경락 혈관', heat: '전신 가열', clamp: '하체 클램프·흡입', finger: '손가락 뼈', deep: '딥 스로트', nod: '끄덕 오럴', waist: '허리 비틀기', hair: '모발 이식',
   },
   admin: {
     title: '관리',
@@ -72,8 +72,8 @@ export const ko = {
     wecomSave: 'Webhook 저장',
     wecomSaved: '저장됨',
   },
-  lang: { en: 'English', zh: '中文', ja: '日本語', ko: '한국어', es: 'Español' },
-  productNames: { p1: 'Sex Doll 1', p2: 'Sex Doll 2', p3: 'Sex Doll 3', p4: 'Male masturbator', p5: 'Automatic penis', p6: 'AV stick' },
+  lang: { en: 'English', zh: '中文', ja: '日本語', ko: '한국어', es: 'Español', ar: 'العربية' },
+  productNames: { p1: '성인 인형 1', p2: '성인 인형 2', p3: '성인 인형 3', p4: '남성 자위기', p5: '자동 페니스', p6: 'AV 스틱' },
   productVariantNames: {
     p1: { v1: '표준형', v2: '연장판' },
     p2: { v1: '일반판', v2: '고급판' },

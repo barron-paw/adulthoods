@@ -46,5 +46,5 @@ export interface LocaleStrings {
     trackingPlaceholder: string
     note: string
   }
-  lang: { en: string; zh: string }
+  lang: { en: string; zh: string; ja: string; ko: string; es: string; ar: string }
 }

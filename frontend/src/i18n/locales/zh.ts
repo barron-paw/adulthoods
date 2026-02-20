@@ -84,7 +84,7 @@ export const zh = {
     wecomSave: '保存',
     wecomSaved: '已保存',
   },
-  lang: { en: 'English', zh: '中文', ja: '日本語', ko: '한국어', es: 'Español' },
+  lang: { en: 'English', zh: '中文', ja: '日本語', ko: '한국어', es: 'Español', ar: 'العربية' },
   productNames: { p1: '充气娃娃1', p2: '充气娃娃2', p3: '充气娃娃3', p4: '飞机杯', p5: '全自动阳具', p6: 'av棒' },
   productVariantNames: {
     p1: { v1: '标准款', v2: '延伸版' },

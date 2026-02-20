@@ -72,8 +72,8 @@ export const es = {
     wecomSave: 'Guardar webhook',
     wecomSaved: 'Guardado',
   },
-  lang: { en: 'English', zh: '中文', ja: '日本語', ko: '한국어', es: 'Español' },
-  productNames: { p1: 'Sex Doll 1', p2: 'Sex Doll 2', p3: 'Sex Doll 3', p4: 'Male masturbator', p5: 'Automatic penis', p6: 'AV stick' },
+  lang: { en: 'English', zh: '中文', ja: '日本語', ko: '한국어', es: 'Español', ar: 'العربية' },
+  productNames: { p1: 'Muñeca sexual 1', p2: 'Muñeca sexual 2', p3: 'Muñeca sexual 3', p4: 'Masturbador masculino', p5: 'Pene automático', p6: 'Vibrador AV' },
   productVariantNames: {
     p1: { v1: 'Estándar', v2: 'Extendido' },
     p2: { v1: 'Estándar', v2: 'Premium' },

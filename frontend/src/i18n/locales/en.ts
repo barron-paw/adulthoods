@@ -82,7 +82,7 @@ export const en = {
     wecomSave: 'Save webhook',
     wecomSaved: 'Saved',
   },
-  lang: { en: 'English', zh: '中文', ja: '日本語', ko: '한국어', es: 'Español' },
+  lang: { en: 'English', zh: '中文', ja: '日本語', ko: '한국어', es: 'Español', ar: 'العربية' },
   /** 产品名称，按语言切换 */
   productNames: { p1: 'Sex Doll 1', p2: 'Sex Doll 2', p3: 'Sex Doll 3', p4: 'Male masturbator', p5: 'Automatic penis', p6: 'AV stick' },
   /** 各产品各款式的名称（Style 下拉），按语言切换。key: productId -> variantId */

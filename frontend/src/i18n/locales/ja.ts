@@ -45,7 +45,7 @@ export const ja = {
     p3BaseLabel: '基本 500 USDT',
   },
   p3OptionNames: {
-    stand: '站立', pubic: '植阴毛', voice: '智能语音', hip: '震动抖臀', thigh: '大腿拆分', vessel: '经络血管', heat: '全身加温', clamp: '下体夹吸', finger: '手指骨', deep: '深喉口交', nod: '点头口交', waist: '扭腰', hair: '植发',
+    stand: '立ち', pubic: '陰毛植え', voice: 'スマート音声', hip: '振動ヒップ', thigh: '太もも分割', vessel: '経絡血管', heat: '全身加温', clamp: '下体クランプ・吸引', finger: '指骨', deep: 'ディープスロート', nod: '頷きオーラル', waist: '腰ひねり', hair: '植毛',
   },
   admin: {
     title: '管理',
@@ -72,8 +72,8 @@ export const ja = {
     wecomSave: 'Webhookを保存',
     wecomSaved: '保存済み',
   },
-  lang: { en: 'English', zh: '中文', ja: '日本語', ko: '한국어', es: 'Español' },
-  productNames: { p1: 'Sex Doll 1', p2: 'Sex Doll 2', p3: 'Sex Doll 3', p4: 'Male masturbator', p5: 'Automatic penis', p6: 'AV stick' },
+  lang: { en: 'English', zh: '中文', ja: '日本語', ko: '한국어', es: 'Español', ar: 'العربية' },
+  productNames: { p1: 'セックスドール1', p2: 'セックスドール2', p3: 'セックスドール3', p4: '男性用オナホ', p5: '自動陽具', p6: 'AVスティック' },
   productVariantNames: {
     p1: { v1: '標準版', v2: '延伸版' },
     p2: { v1: '通常版', v2: '高級版' },

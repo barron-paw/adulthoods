@@ -4,11 +4,12 @@ import { zh } from './locales/zh'
 import { ja } from './locales/ja'
 import { ko } from './locales/ko'
 import { es } from './locales/es'
+import { ar } from './locales/ar'
 
-export type Locale = 'en' | 'zh' | 'ja' | 'ko' | 'es'
-const locales: Record<Locale, EnKeys> = { en, zh, ja, ko, es }
+export type Locale = 'en' | 'zh' | 'ja' | 'ko' | 'es' | 'ar'
+const locales: Record<Locale, EnKeys> = { en, zh, ja, ko, es, ar }
 const STORAGE_KEY = 'adulthoods-locale'
-const VALID_LOCALES: Locale[] = ['en', 'zh', 'ja', 'ko', 'es']
+const VALID_LOCALES: Locale[] = ['en', 'zh', 'ja', 'ko', 'es', 'ar']
 
 interface I18nContextValue {
   t: EnKeys
@@ -36,15 +37,17 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
   )
 
   useEffect(() => {
-    const langMap: Record<Locale, string> = { en: 'en', zh: 'zh-CN', ja: 'ja', ko: 'ko', es: 'es' }
+    const langMap: Record<Locale, string> = { en: 'en', zh: 'zh-CN', ja: 'ja', ko: 'ko', es: 'es', ar: 'ar' }
     const titleSuffix: Record<Locale, string> = {
       en: ' · Adult Products',
       zh: ' · 成人用品',
       ja: ' · アダルト',
       ko: ' · 성인용품',
       es: ' · Productos',
+      ar: ' · منتجات للبالغين',
     }
     document.documentElement.lang = langMap[locale]
+    document.documentElement.dir = locale === 'ar' ? 'rtl' : 'ltr'
     document.title = `adulthood.me${titleSuffix[locale]}`
   }, [locale])
 
