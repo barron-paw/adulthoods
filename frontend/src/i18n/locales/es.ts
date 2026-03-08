@@ -43,6 +43,7 @@ export const es = {
     customOptionsLabel: 'Opciones (precio en USDT)',
     customTotalLabel: 'Total',
     p3BaseLabel: 'Base 500 USDT',
+    p3CelebrityPlaceholder: 'Opcional: ej. nombre de celebridad (apariencia)',
   },
   p3OptionNames: {
     stand: 'Standing', pubic: 'Pubic hair', voice: 'Smart voice', hip: 'Vibrating hip', thigh: 'Thigh split', vessel: 'Meridian & vessels', heat: 'Full-body heating', clamp: 'Lower body clamp & suction', finger: 'Finger bones', deep: 'Deep throat oral', nod: 'Nodding oral', waist: 'Waist twist', hair: 'Hair implant',

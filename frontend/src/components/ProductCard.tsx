@@ -23,6 +23,7 @@ export default function ProductCard({ product }: ProductCardProps) {
   const { t } = useI18n()
   const [selectedVariantId, setSelectedVariantId] = useState(product.defaultVariantId)
   const [p3SelectedIds, setP3SelectedIds] = useState<string[]>([])
+  const [p3CelebrityName, setP3CelebrityName] = useState('')
   const [mediaTab, setMediaTab] = useState<MediaTab>('image')
   const [videoInView, setVideoInView] = useState(false)
   const videoWrapRef = useRef<HTMLDivElement>(null)
@@ -86,17 +87,23 @@ export default function ProductCard({ product }: ProductCardProps) {
     setVerifyStatus('loading')
     setVerifyError('')
     try {
+      const body: Record<string, unknown> = {
+        hash: trimmedHash,
+        address: address.trim(),
+        phone: phone.trim(),
+        remarks: remarks.trim(),
+        productId: product.id,
+        variantId: selectedVariant.id,
+      }
+      if (product.id === 'p3') {
+        body.p3OptionIds = p3SelectedIds
+        body.p3CelebrityName = p3CelebrityName.trim() || undefined
+        body.p3TotalUsdt = P3_BASE_USDT + P3_OPTIONS.filter((o) => p3SelectedIds.includes(o.id)).reduce((s, o) => s + o.price, 0)
+      }
       const res = await fetch(`${API_BASE}/api/order`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          hash: trimmedHash,
-          address: address.trim(),
-          phone: phone.trim(),
-          remarks: remarks.trim(),
-          productId: product.id,
-          variantId: selectedVariant.id,
-        }),
+        body: JSON.stringify(body),
       })
       if (res.ok) {
         setVerifyStatus('ok')
@@ -214,6 +221,13 @@ export default function ProductCard({ product }: ProductCardProps) {
                 )
               })}
             </div>
+            <input
+              type="text"
+              value={p3CelebrityName}
+              onChange={(e) => setP3CelebrityName(e.target.value)}
+              placeholder={(t.product as Record<string, string>).p3CelebrityPlaceholder ?? '选填：如某位明星名字'}
+              className="w-full mt-2 px-3 py-2 rounded bg-stone-800 border border-stone-600 text-stone-400 text-xs placeholder-stone-600"
+            />
             <p className="text-rose-400 font-medium mt-auto">
               {(t.product as Record<string, string>).customTotalLabel ?? '合计'}: {P3_BASE_USDT + P3_OPTIONS.filter((o) => p3SelectedIds.includes(o.id)).reduce((s, o) => s + o.price, 0)} USDT
             </p>

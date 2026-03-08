@@ -43,6 +43,7 @@ export const zh = {
     customOptionsLabel: '可选配置（价格单位 USDT）',
     customTotalLabel: '合计',
     p3BaseLabel: '起步价 500 USDT',
+    p3CelebrityPlaceholder: '选填：如某位明星名字',
   },
   p3OptionNames: {
     stand: '站立',

@@ -43,6 +43,7 @@ export const ko = {
     customOptionsLabel: '옵션 선택 (가격 USDT)',
     customTotalLabel: '합계',
     p3BaseLabel: '기본 500 USDT',
+    p3CelebrityPlaceholder: '선택: 예) 연예인 이름 (외관 참고)',
   },
   p3OptionNames: {
     stand: '서기', pubic: '음모 이식', voice: '스마트 음성', hip: '진동 힙', thigh: '허벅지 분리', vessel: '경락 혈관', heat: '전신 가열', clamp: '하체 클램프·흡입', finger: '손가락 뼈', deep: '딥 스로트', nod: '끄덕 오럴', waist: '허리 비틀기', hair: '모발 이식',

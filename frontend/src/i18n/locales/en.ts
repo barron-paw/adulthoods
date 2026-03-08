@@ -41,6 +41,7 @@ export const en = {
     customOptionsLabel: 'Select options (price in USDT)',
     customTotalLabel: 'Total',
     p3BaseLabel: 'Base 500 USDT',
+    p3CelebrityPlaceholder: 'Optional: e.g. celebrity name for appearance',
   },
   p3OptionNames: {
     stand: 'Standing',

@@ -43,6 +43,7 @@ export const ja = {
     customOptionsLabel: 'オプション選択（価格 USDT）',
     customTotalLabel: '合計',
     p3BaseLabel: '基本 500 USDT',
+    p3CelebrityPlaceholder: '任意：例・有名人の名前（外見参考）',
   },
   p3OptionNames: {
     stand: '立ち', pubic: '陰毛植え', voice: 'スマート音声', hip: '振動ヒップ', thigh: '太もも分割', vessel: '経絡血管', heat: '全身加温', clamp: '下体クランプ・吸引', finger: '指骨', deep: 'ディープスロート', nod: '頷きオーラル', waist: '腰ひねり', hair: '植毛',

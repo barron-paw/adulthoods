@@ -43,6 +43,7 @@ export const ar = {
     customOptionsLabel: 'اختر الخيارات (السعر بـ USDT)',
     customTotalLabel: 'المجموع',
     p3BaseLabel: 'أساس 500 USDT',
+    p3CelebrityPlaceholder: 'اختياري: مثلاً اسم مشهور (المظهر)',
   },
   p3OptionNames: {
     stand: 'الوقوف',
